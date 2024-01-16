@@ -35,46 +35,63 @@
         </td>
 
         <td>
-          <ul>
-            <li>
-              <button type="button">Collapse All</button> 
-              <button type="button">View Progress</button>
-              <select>
-                <option>Publish All</option>
-                <option>a</option>
-                <option>b</option>
-                <option>c</option>
-              </select>
-              <button type="button">Module</button>
-            </li>
-            <ul>
-              <ul>
-                <li>Week0 Intro</li>
-                <ul>
-                  <li>Learning Objectives</li>
-                  <li>Reading</li>
-                  <li>Slides</li>
-                </ul>
-                <li>Week1 HTML</li>
-                <ul>
-                  <li>Learning Objectives</li>
-                  <li>Reading</li>
-                  <li>Slides</li>
-                </ul>
-              </ul>
-            </ul>
-          </ul>
-        </td>
+          <input type="text" placeholder="Search for assignment"></input> 
+          <button type="button">Group</button>
+          <button type="button">Assignment</button>
+          <select>
+            <option>Edit assignment date</option>
+          </select>
 
-        <td>
+          <h2>
+            Assignment
+            <select onchange="location = this.value">
+              <option>Edit</option>
+              <option value="/kanbas/courses/assignments/edit/screen.html">Speed Grader</option>
+            </select>
+          </h2>
           <ul>
-            <h2>Course Status</h2>
-            <li>
-              <button type="button">Unpublish</button>
-              <button type="button">Pubslished</button>
-            </li>
-            <h2>Comming up</h2>
+            <li>a1</li>
+            <li>a2</li>
+            <li>a3</li>
           </ul>
+
+          <h2>
+            Quizes
+            <select>
+              <option>Edit</option>
+            </select>
+          </h2>
+          <ul>
+            <li>q1</li>
+            <li>q2</li>
+            <li>q3</li>
+          </ul>
+
+          <h2>
+            Exams
+            <select>
+              <option>Edit</option>
+            </select>
+          </h2>
+          <ul>
+            <li>e1</li>
+            <li>e2</li>
+            <li>e3</li>
+          </ul>
+
+          <h2>
+            Projects
+            <select>
+              <option>Edit</option>
+            </select>
+          </h2>
+          <ul>
+            <li>p1</li>
+            <li>p2</li>
+            <li>p3</li>
+          </ul>
+
+
         </td>
       </tr>
     </tbody>
