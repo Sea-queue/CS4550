@@ -21,82 +21,87 @@
           </ul>
         </td>
 
-        <td valign="top">
-          <ul>
-            <li><a href="/kanbas/courses/home/screen.html">Home</a></li>
-            <li><a href="">Modules</a></li>
-            <li><a href="">Piazza</a></li>
-            <li><a href="">Zoom Meetings</a></li>
-            <li><a href="/kanbas/courses/assignments/screen.html">Assignments</a></li>
-            <li><a href="">Quizes</a></li>
-            <li><a href="/kanbas/courses/grades/screen.html">Grades</a></li>
-            <li><a href="">People</a></li>
-          </ul>
-        </td>
+        <!-- for the "cancle" button to automatically return to the page that 'action' is pointing to
+             everything has to be in the form tag. when 'submit' the values of each input 'name' will
+             be captured in the quiry list after the '?' mark in the URL -->
+        <form action="/kanbas/courses/assignments/screen.html">
+          <td valign="top">
+            <ul>
+              <li><a href="/kanbas/courses/home/screen.html">Home</a></li>
+              <li><a href="">Modules</a></li>
+              <li><a href="">Piazza</a></li>
+              <li><a href="">Zoom Meetings</a></li>
+              <li><a href="/kanbas/courses/assignments/screen.html">Assignments</a></li>
+              <li><a href="">Quizes</a></li>
+              <li><a href="/kanbas/courses/grades/screen.html">Grades</a></li>
+              <li><a href="">People</a></li>
+            </ul>
+          </td>
 
-        <td>
-          <select>
-            <option>Speedgrader</option>
-          </select>
-          <hr>
+          <td>
+            <select>
+              <option>Speedgrader</option>
+            </select>
+            <hr>
 
-          <h2>Assignment Name</h2>
-          <input type="text" placeholder="A1"/>
+            <h2>Assignment Name</h2>
+            <input type="text" placeholder="A1" name="assignment-name"/>
 
-          <h3>points</h3>
-          <input type="number" placeholder="100"/>
+            <h3>points</h3>
+            <input type="number" placeholder="100" name="assignment-point"/>
 
-          <h3>Assignment Group</h3>
-          <select>
-            <option>Assignment</option>
-          </select>
+            <h3>Assignment Group</h3>
+            <select>
+              <option>Assignment</option>
+            </select>
 
-          <h3>Submission Type</h3>
-          <select>
-            <option>Online</option>
-          </select>
+            <h3>Submission Type</h3>
+            <select>
+              <option>Online</option>
+            </select>
 
-          <h3>Online Entry points</h3>
-          <label>
-            <input type="checkbox" value="Text Entry"/>
-            Text Entry
-          </label>
+            <h3>Online Entry points</h3>
+            <label>
+              <input type="checkbox" value="Text Entry"/>
+              Text Entry
+            </label>
 
-          <label>
-            <input type="checkbox" value="Web URL"/>
-            Web URL
-          </label>
+            <label>
+              <input type="checkbox" value="Web URL"/>
+              Web URL
+            </label>
 
-          <label>
-            <input type="checkbox" value="Media Recording"/>
-            Media Recording
-          </label>
+            <label>
+              <input type="checkbox" value="Media Recording"/>
+              Media Recording
+            </label>
 
-          <label>
-            <input type="checkbox" value="Student Annotation"/>
-            Student Annotation
-          </label>
+            <label>
+              <input type="checkbox" value="Student Annotation"/>
+              Student Annotation
+            </label>
 
-          <label>
-            <input type="checkbox" value="File uploads"/>
-            File uploads
-          </label>
+            <label>
+              <input type="checkbox" value="File uploads"/>
+              File uploads
+            </label>
 
-          <h3>Assign To</h3>
-          <input type="text" placeholder="Everyone"/>
+            <h3>Assign To</h3>
+            <input type="text" placeholder="Everyone"/>
 
-          <h3>Due</h3>
-          <input type="date">
+            <h3>Due</h3>
+            <input type="date">
 
-          <h3>Available from</h3>
-          <input type="date">
+            <h3>Available from</h3>
+            <input type="date">
 
-          <h3>Util</h3>
-          <input type="date">
+            <h3>Util</h3>
+            <input type="date">
 
-          <button type="button">Cancle</button>
-          <button type="button">Save</button>
-        </td>
+            <button type="submit">Cancle</button>
+            <button type="submit">Save</button>
+          </td>
+        </form>
       </tr>
     </tbody>
   </table>
