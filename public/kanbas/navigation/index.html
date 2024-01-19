@@ -1,27 +1,83 @@
 <!DOCTYPE html>
-<head>
+<html>
+  <head>
 
-</head>
-<body>
-  <a href="../../index.html">Back Home</a>
-  <table>
-    <tbody>
-      <tr>
-        <td valign="top">
+  </head>
+  <body>
+    <a href="../../index.html">Back Home</a>
+    <!-- <table>
+      <tbody>
+        <tr>
+          <td valign="top">
+            <ul>
+              <li><a href="/kanbas/account/navigation/index.html">Account</a></li>
+              <li><a href="">Dashboard</a></li>
+              <li><a href="/kanbas/courses/navigation/index.html">Courses</a></li>
+              <li><a href="">Calendar</a></li>
+              <li><a href="">Inbox</a></li>
+              <li><a href="">History</a></li>
+              <li><a href="">Studio</a></li>
+              <li><a href="">Commons</a></li>
+              <li><a href="">Help</a></li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table> -->
+    <script>
+      // document is the entry point to the DOM, controling the DOM is controlling the UI
+      // document.write("hello from Seaqueue")
+      function KanbasNavigation() {
+        const links = [
+          {
+            name:"Account",
+            url:"/kanbas/account/navigation/index.html"
+          },
+          {
+            name:"Dashboard",
+            url:""
+          },
+          {
+            name:"Courses",
+            url:"/kanbas/courses/navigation/index.html"
+          },
+          {
+            name:"Calendar",
+            url:""
+          },
+          {
+            name:"Inbox",
+            url:""
+          },
+          {
+            name:"History",
+            url:""
+          },
+          {
+            name:"Studio",
+            url:""
+          },
+          {
+            name:"Commons",
+            url:""
+          },
+          {
+            name:"Help",
+            url:""
+          },
+        ];
+        document.write(`
           <ul>
-            <li><a href="/kanbas/account/navigation/index.html">Account</a></li>
-            <li><a href="">Dashboard</a></li>
-            <li><a href="/kanbas/courses/navigation/index.html">Courses</a></li>
-            <li><a href="">Calendar</a></li>
-            <li><a href="">Inbox</a></li>
-            <li><a href="">History</a></li>
-            <li><a href="">Studio</a></li>
-            <li><a href="">Commons</a></li>
-            <li><a href="">Help</a></li>
+            ${
+              links.map(
+                (link) => `<li><a href="${link.url}"> ${link.name}</a></li>`
+              ).join("")
+            }
           </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</body>
+        `);
+      }
+      KanbasNavigation()
+    </script>
+  </body>
+</html>
  

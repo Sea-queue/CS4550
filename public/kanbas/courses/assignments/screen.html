@@ -1,103 +1,112 @@
 <!DOCTYPE html>
-<head>
+<html>
+  <head>
+    <script src="/kanbas/navigation/index.js"></script>
+    <script src="/kanbas/courses/navigation/index.js"></script>
+  </head>
+  <body>
+    <a href="../../index.html">Back Home</a>
+    <table>
+      <tbody>
+        <tr>
+          <td valign="top">
+            <script>
+              KanbasNavigation("Courses");
+            </script>
+            <!-- <ul>
+              <li><a href="/kanbas/account/navigation/index.html">Account</a></li>
+              <li><a href="">Dashboard</a></li>
+              <li><a href="/kanbas/courses/navigation/index.html">Courses</a></li>
+              <li><a href="">Calendar</a></li>
+              <li><a href="">Inbox</a></li>
+              <li><a href="">History</a></li>
+              <li><a href="">Studio</a></li>
+              <li><a href="">Commons</a></li>
+              <li><a href="">Help</a></li>
+            </ul> -->
+          </td>
 
-</head>
-<body>
-  <a href="../../index.html">Back Home</a>
-  <table>
-    <tbody>
-      <tr>
-        <td valign="top">
-          <ul>
-            <li><a href="/kanbas/account/navigation/index.html">Account</a></li>
-            <li><a href="">Dashboard</a></li>
-            <li><a href="/kanbas/courses/navigation/index.html">Courses</a></li>
-            <li><a href="">Calendar</a></li>
-            <li><a href="">Inbox</a></li>
-            <li><a href="">History</a></li>
-            <li><a href="">Studio</a></li>
-            <li><a href="">Commons</a></li>
-            <li><a href="">Help</a></li>
-          </ul>
-        </td>
+          <td  valign="top">
+            <script>
+              CourseNavigation("Assignments");
+            </script>
+            <!-- <ul>
+              <li><a href="/kanbas/courses/home/screen.html">Home</a></li>
+              <li><a href="">Modules</a></li>
+              <li><a href="">Piazza</a></li>
+              <li><a href="">Zoom Meetings</a></li>
+              <li><a href="/kanbas/courses/assignments/screen.html">Assignments</a></li>
+              <li><a href="">Quizes</a></li>
+              <li><a href="/kanbas/courses/grades/screen.html">Grades</a></li>
+              <li><a href="">People</a></li>
+            </ul> -->
+          </td>
 
-        <td  valign="top">
-          <ul>
-            <li><a href="/kanbas/courses/home/screen.html">Home</a></li>
-            <li><a href="">Modules</a></li>
-            <li><a href="">Piazza</a></li>
-            <li><a href="">Zoom Meetings</a></li>
-            <li><a href="/kanbas/courses/assignments/screen.html">Assignments</a></li>
-            <li><a href="">Quizes</a></li>
-            <li><a href="/kanbas/courses/grades/screen.html">Grades</a></li>
-            <li><a href="">People</a></li>
-          </ul>
-        </td>
-
-        <td>
-          <input type="text" placeholder="Search for assignment"></input> 
-          <button type="button">Group</button>
-          <button type="button">Assignment</button>
-          <select>
-            <option>Edit assignment date</option>
-          </select>
-
-          <h2>
-            Assignment
-            <select onchange="location = this.value">
-              <option>Edit</option>
-              <option value="/kanbas/courses/assignments/edit/screen.html">Speed Grader</option>
+          <td>
+            <input type="text" placeholder="Search for assignment"></input> 
+            <button type="button">Group</button>
+            <button type="button">Assignment</button>
+            <select>
+              <option>Edit assignment date</option>
             </select>
-          </h2>
-          <ul>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">a1-HTML</a></li>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">a2-REACT</a></li>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">a3-CSS</a></li>
-          </ul>
 
-          <h2>
-            Quizes
-            <select onchange="location = this.value">
-              <option>Edit</option>
-              <option value="/kanbas/courses/assignments/edit/screen.html">Speed Grader</option>
-            </select>
-          </h2>
-          <ul>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">q1</a></li>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">q2</a></li>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">q3</a></li>
-          </ul>
+            <h2>
+              Assignment
+              <select onchange="location = this.value">
+                <option>Edit</option>
+                <option value="/kanbas/courses/assignments/edit/screen.html">Speed Grader</option>
+              </select>
+            </h2>
+            <ul>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">a1-HTML</a></li>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">a2-REACT</a></li>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">a3-CSS</a></li>
+            </ul>
 
-          <h2>
-            Exams
-            <select onchange="location = this.value">
-              <option>Edit</option>
-              <option value="/kanbas/courses/assignments/edit/screen.html">Speed Grader</option>
-            </select>
-          </h2>
-          <ul>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">e1</a></li>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">e2</a></li>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">e3</a></li>
-          </ul>
+            <h2>
+              Quizes
+              <select onchange="location = this.value">
+                <option>Edit</option>
+                <option value="/kanbas/courses/assignments/edit/screen.html">Speed Grader</option>
+              </select>
+            </h2>
+            <ul>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">q1</a></li>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">q2</a></li>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">q3</a></li>
+            </ul>
 
-          <h2>
-            Projects
-            <select onchange="location = this.value">
-              <option>Edit</option>
-              <option value="/kanbas/courses/assignments/edit/screen.html">Speed Grader</option>
-            </select>
-          </h2>
-          <ul>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">q1</a></li>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">q2</a></li>
-            <li><a href="/kanbas/courses/assignments/edit/screen.html">q3</a></li>
-          </ul>
+            <h2>
+              Exams
+              <select onchange="location = this.value">
+                <option>Edit</option>
+                <option value="/kanbas/courses/assignments/edit/screen.html">Speed Grader</option>
+              </select>
+            </h2>
+            <ul>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">e1</a></li>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">e2</a></li>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">e3</a></li>
+            </ul>
+
+            <h2>
+              Projects
+              <select onchange="location = this.value">
+                <option>Edit</option>
+                <option value="/kanbas/courses/assignments/edit/screen.html">Speed Grader</option>
+              </select>
+            </h2>
+            <ul>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">q1</a></li>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">q2</a></li>
+              <li><a href="/kanbas/courses/assignments/edit/screen.html">q3</a></li>
+            </ul>
 
 
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</body>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
  

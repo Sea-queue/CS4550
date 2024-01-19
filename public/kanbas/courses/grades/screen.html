@@ -1,125 +1,133 @@
 <!DOCTYPE html>
-<head>
+<html>
+  <head>
+    <script src="/kanbas/navigation/index.js"></script>
+    <script src="/kanbas/courses/navigation/index.js"></script>
+  </head>
+  <body>
+    <a href="../../index.html">Back Home</a>
+    <table>
+      <tbody>
+        <tr>
+          <td valign="top">
+            <script>
+              KanbasNavigation("Courses");
+            </script>
+            <!-- <ul>
+              <li><a href="/kanbas/account/navigation/index.html">Account</a></li>
+              <li><a href="">Dashboard</a></li>
+              <li><a href="/kanbas/courses/navigation/index.html">Courses</a></li>
+              <li><a href="">Calendar</a></li>
+              <li><a href="">Inbox</a></li>
+              <li><a href="">History</a></li>
+              <li><a href="">Studio</a></li>
+              <li><a href="">Commons</a></li>
+              <li><a href="">Help</a></li>
+            </ul> -->
+          </td>
 
-</head>
-<body>
-  <a href="../../index.html">Back Home</a>
-  <table>
-    <tbody>
-      <tr>
-        <td valign="top">
-          <ul>
-            <li><a href="/kanbas/account/navigation/index.html">Account</a></li>
-            <li><a href="">Dashboard</a></li>
-            <li><a href="/kanbas/courses/navigation/index.html">Courses</a></li>
-            <li><a href="">Calendar</a></li>
-            <li><a href="">Inbox</a></li>
-            <li><a href="">History</a></li>
-            <li><a href="">Studio</a></li>
-            <li><a href="">Commons</a></li>
-            <li><a href="">Help</a></li>
-          </ul>
-        </td>
+          <td valign="top">
+            <script>
+              CourseNavigation("Grades");
+            </script>
+            <!-- <ul>
+              <li><a href="/kanbas/courses/home/screen.html">Home</a></li>
+              <li><a href="">Modules</a></li>
+              <li><a href="">Piazza</a></li>
+              <li><a href="">Zoom Meetings</a></li>
+              <li><a href="/kanbas/courses/assignments/screen.html">Assignments</a></li>
+              <li><a href="">Quizes</a></li>
+              <li><a href="/kanbas/courses/grades/screen.html">Grades</a></li>
+              <li><a href="">People</a></li>
+            </ul> -->
+          </td>
 
-        <td valign="top">
-          <ul>
-            <li><a href="/kanbas/courses/home/screen.html">Home</a></li>
-            <li><a href="">Modules</a></li>
-            <li><a href="">Piazza</a></li>
-            <li><a href="">Zoom Meetings</a></li>
-            <li><a href="/kanbas/courses/assignments/screen.html">Assignments</a></li>
-            <li><a href="">Quizes</a></li>
-            <li><a href="/kanbas/courses/grades/screen.html">Grades</a></li>
-            <li><a href="">People</a></li>
-          </ul>
-        </td>
+          <td>
+            <div>
+              <select>
+                <option>Gradebook</option>
+              </select>
+              <button type="button">import</button>
+              <select>
+                <option>export</option>
+              </select>
+              <button type="button">configure</button>
+            </div>
+            <br/>
+            <div>
+              <label>
+                Student Name
+                <input placeholder="Search Students"/>
+              </label>
+            </div>
+            <br/>
+            <div>
+              <label>
+                Assignment Name
+                <input placeholder="Search Assignments"/>
+              </label>
+            </div>
+            <br/>
+            <button type="button">Apply Filters</button>
+            <br/>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Student Names</th>
+                  <th>Assignment1 (out of 100)</th>
+                  <th>Assignment2 (out of 100)</th>
+                  <th>Assignment3 (out of 100)</th>
+                  <th>Assignment4 (out of 100)</th>
+                  <th>Quizes (out of 100)</th>
+                  <th>Projects (out of 100)</th>
+                </tr>
+              </thead>
 
-        <td>
-          <div>
-            <select>
-              <option>Gradebook</option>
-            </select>
-            <button type="button">import</button>
-            <select>
-              <option>export</option>
-            </select>
-            <button type="button">configure</button>
-          </div>
-          <br/>
-          <div>
-            <label>
-              Student Name
-              <input placeholder="Search Students"/>
-            </label>
-          </div>
-          <br/>
-          <div>
-            <label>
-              Assignment Name
-              <input placeholder="Search Assignments"/>
-            </label>
-          </div>
-          <br/>
-          <button type="button">Apply Filters</button>
-          <br/>
-          <table border="1" width="100%">
-            <thead>
-              <tr>
-                <th>Student Names</th>
-                <th>Assignment1 (out of 100)</th>
-                <th>Assignment2 (out of 100)</th>
-                <th>Assignment3 (out of 100)</th>
-                <th>Assignment4 (out of 100)</th>
-                <th>Quizes (out of 100)</th>
-                <th>Projects (out of 100)</th>
-              </tr>
-            </thead>
+              <tbody>
+                <tr>
+                  <td>S1</td>
+                  <td><input type="number" max="100"></td>
+                  <td>90</td>
+                  <td>90</td>
+                  <td>90</td>
+                  <td>90</td>
+                  <td>95</td>
+                </tr>
 
-            <tbody>
-              <tr>
-                <td>S1</td>
-                <td><input type="number" max="100"></td>
-                <td>90</td>
-                <td>90</td>
-                <td>90</td>
-                <td>90</td>
-                <td>95</td>
-              </tr>
+                <tr>
+                  <td>S2</td>
+                  <td>82</td>
+                  <td>82</td>
+                  <td>82</td>
+                  <td>82</td>
+                  <td><input type="number" max="100"></td>
+                  <td>79</td>
+                </tr>
 
-              <tr>
-                <td>S2</td>
-                <td>82</td>
-                <td>82</td>
-                <td>82</td>
-                <td>82</td>
-                <td><input type="number" max="100"></td>
-                <td>79</td>
-              </tr>
+                <tr>
+                  <td>S3</td>
+                  <td>89</td>
+                  <td>97</td>
+                  <td>89</td>
+                  <td>97</td>
+                  <td>97</td>
+                  <td><input type="number" max="100"></td>
+                </tr>
 
-              <tr>
-                <td>S3</td>
-                <td>89</td>
-                <td>97</td>
-                <td>89</td>
-                <td>97</td>
-                <td>97</td>
-                <td><input type="number" max="100"></td>
-              </tr>
-
-              <tr>
-                <td>S4</td>
-                <td><input type="number" max="100"></td>
-                <td><input type="number" max="100"></td>
-                <td><input type="number" max="100"></td>
-                <td><input type="number" max="100"></td>
-                <td><input type="number" max="100"></td>
-                <td><input type="number" max="100"></td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</body>
- 
+                <tr>
+                  <td>S4</td>
+                  <td><input type="number" max="100"></td>
+                  <td><input type="number" max="100"></td>
+                  <td><input type="number" max="100"></td>
+                  <td><input type="number" max="100"></td>
+                  <td><input type="number" max="100"></td>
+                  <td><input type="number" max="100"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
