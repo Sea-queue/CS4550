@@ -2,6 +2,7 @@
 <html>
   <head>
     <script src="/kanbas/navigation/index.js"></script>
+    <script src="/kanbas/courses/navigation/index.js"></script>
   </head>
   <body>
     <a href="../../index.html">Back Home</a>
@@ -30,7 +31,10 @@
               be captured in the quiry list after the '?' mark in the URL -->
           <form action="/kanbas/courses/assignments/screen.html">
             <td valign="top">
-              <ul>
+              <script>
+                CourseNavigation("Assignments")
+              </script>
+              <!-- <ul>
                 <li><a href="/kanbas/courses/home/screen.html">Home</a></li>
                 <li><a href="">Modules</a></li>
                 <li><a href="">Piazza</a></li>
@@ -39,7 +43,7 @@
                 <li><a href="">Quizes</a></li>
                 <li><a href="/kanbas/courses/grades/screen.html">Grades</a></li>
                 <li><a href="">People</a></li>
-              </ul>
+              </ul> -->
             </td>
 
             <td>
