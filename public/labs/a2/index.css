@@ -1,0 +1,124 @@
+p{
+  font-size: 1cm;
+}
+
+/* 
+- syntax for id is "#" + "name"
+- syntax for class is .class-name
+- we should use class to cover everything in CSS, "id" is used for association with "for".
+- header ul li .header_logo: this is containment, 
+  .header_logo is a class that only applys to the containment that matches the order, meaning
+  even .header_logo is included in other places, it won't be applied.
+- li.active:before: without space ".active" is associated with li, meaning in the same tag.
+  li .active: with space ".active" is contained in the li tag.
+- :before: position wise.
+
+- the order matters, later one wins if they are the same level
+- the more specific named style wins over more general ones
+- margin - border - padding - texts
+- margin and padding has no color
+- position: absolute / relevant determin how "top" "left" is parsed.
+- position absolute is calculated to the nearest parent div.
+*/
+p#p1{
+  color:blueviolet;
+}
+
+p#p2{
+  color:darkcyan;
+}
+
+.class-selector1 {
+  background-color: darkolivegreen;
+  color:bisque;
+}
+
+/* 
+for this to apply, the element structure has to match this path 
+meaning, if other element use .class-selector2 won't be applied.
+*/
+.class-selector1 .class-selector2{
+  background-color: black;
+  color:chartreuse;
+}
+
+
+.class-selector2 .class-selector3{
+  background-color: rgb(231, 203, 112);
+  color: rgb(17, 6, 91);
+}
+
+.class-selector2 .class-selector3 .class-selector4{
+  background-color: darkgoldenrod;
+  color: darkslateblue;
+}
+
+.wd-fg-color-black { color: black; }
+.wd-fg-color-white { color: white; }
+.wd-fg-color-blue { color: #7070ff; }
+.wd-fg-color-red { color: #ff7070; }
+.wd-fg-color-green { color: green; }
+
+.wd-bg-color-yellow {
+  background-color: #ffff07;
+}
+.wd-bg-color-blue {
+  background-color: #7070ff;
+}
+.wd-bg-color-red {
+  background-color: #ff7070;
+}
+.wd-bg-color-green {
+  background-color: green;
+}
+
+.border-fat{
+  border-width: 20px 30px 20px 30px;
+}
+.border-thin {
+  border-width: 10px;
+}
+.border-solid {
+  border-style: solid;
+}
+.border-dashed {
+  border-style: dashed;
+}
+.border-c1 {
+  border-color: #ffff07;
+}
+.border-c2 {
+  border-color:rgb(17, 6, 91);
+}
+
+
+.padded-top-left{
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.padded-bottom-right {
+  padding-bottom: 50px;
+  padding-right: 50px;
+}
+
+.padding-fat {
+  padding: 50px;
+}
+
+.margin-bottom {
+  margin-bottom: 50px;
+}
+
+.margin-right-left {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.margin-all-around {
+  margin: 30px;
+}
+
+
+
+

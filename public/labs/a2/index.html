@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="index.css" rel="stylesheet"/>
+    <!-- <style> 
+      p{
+        color: green;
+        font-size: 2cm;
+      }
+    </style> -->
+
+  </head>
+  <body>
+    <a href="../../index.html">Back Home</a>
+    <h2>Lab2</h2>
+    <h1>Cascading Style Sheets (CSS)</h1>
+    <h2>Style attribute and tag</h2>
+    <h3>Style attribute</h3>
+    <p>
+      Style attribute allows configuring look and feel right on the element. Although it's very convenient it is considered bad practice and you should avoid using the style attribute
+    </p>
+
+    <p id="p1">
+      Instead of changing the look and feel of all the elements of the same name, e.g., P, we can refer to a specific element by its ID
+    </p>
+    <p id="p2">
+      Here's another paragraph using a different ID and a different look and feel
+    </p>
+
+    <h3>Class selectors</h3>
+    <p class="class-selector1">
+      Instead of using IDs to refer to elements, you can use an element's CLASS attribute
+    </p>
+
+    <p class="class-selector1">
+      This heading has same style as paragraph above
+    </p>
+
+    <div class="class-selector1">
+      <h3>Document structure selectors</h3>
+      <div class="class-selector2">
+        Selectors can be combined to refer elements in particular places in the document
+        <p class="class-selector3">
+          This paragraph's red background is referenced as
+          <br/>.selector-2 .selector3<br/>
+          meaning the descendant of some ancestor.
+          <br/>
+          <span class="class-selector4">
+            Whereas this span is a direct child of its parent
+          </span>
+          <br/>
+          You can combine these relationships to create specific styles depending on the document structure
+        </p>
+      </div>
+    </div>
+
+    <h2>Colors</h2>
+    <h3 class="wd-fg-color-blue">Foreground color</h3>
+    <p class="wd-fg-color-red">
+      The text in this paragraph is red but
+      <span class="wd-fg-color-green">this text is green</span>
+    </p>
+
+    <h3 class="wd-bg-color-blue wd-fg-color-white">Background color</h3>
+    <p class="wd-bg-color-red wd-fg-color-black">
+      This background of this paragraph is red but
+      <span class="wd-bg-color-green wd-fg-color-white"> the background
+      of this text is green and the foreground white</span>
+    </p>
+
+    <h2>Borders</h2>
+    <p class="border-fat border-c1 border-solid">
+      Solid fat red border
+    </p>
+    <p class="border-thin border-c2 border-dashed">
+      Dashed thin blue border
+    </p>
+
+    <h2>padding</h2>
+    <div class="padded-top-left border-fat border-c1 border-solid wb-bg-color-yellow">
+      padded top left
+    </div>
+    <div class="padded-bottom-right border-fat border-c2 border-solid wd-bg-color-yellow">
+      Padded bottom right
+    </div>
+    <div class="padding-fat border-fat border-c1 border-solid wd-bg-color-blue wd-fg-color-white">
+      padded all around
+    </div>
+
+    <h2>Margins</h2>
+    <div class="margin-bottom padded-top-left border-fat border-c1 wd-bg-color-yellow">
+      margin bottom
+    </div>
+    <div class="margin-right-left padded-bottom-right border-fat border-blue border-solid wd-bg-color-yellow">
+      margin left right
+    </div>
+    <div class="margin-all-around padding-fat border-fat border-c1 border-solid wd-bg-color-blue wd-fg-color-white">
+      margin all around
+    </div>
+
+
+  </body>
+</html>
