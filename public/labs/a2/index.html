@@ -346,6 +346,206 @@
       <div class="d-none d-lg-block d-xl-none fa-2x">L</div>
       <div class="d-none d-xl-block d-xxl-none fa-2x">XL</div>
       <div class="d-none d-xxl-block fa-2x">XXL</div>
+
+      <h2>Tabels</h2>
+      <table class="table">
+        <thead>
+          <tr class="table-dark">
+            <th>Quiz</th>
+            <th>Topic</th>
+            <th>Date</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-warning">
+            <td>Q1</td>
+            <td>HTML</td>
+            <td>2/3/24</td>
+            <td>100</td>
+          </tr>
+
+          <tr class="table-danger">
+            <td>Q2</td>
+            <td>CSS</td>
+            <td>2/3/24</td>
+            <td>100</td>
+          </tr>
+
+          <tr class="table-primary">
+            <td>Q3</td>
+            <td>JS</td>
+            <td>2/3/24</td>
+            <td>100</td>
+          </tr>
+        </tbody>
+
+        <tfoot class="table-success">
+          <tr>
+            <td colspan="3">Average</td>
+            <td>100</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h2>Responsive tables</h2>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Very</th><th>long</th><th>set</th><th>of</th><th>columns</th>
+              <th>Very</th><th>long</th><th>set</th><th>of</th><th>columns</th>
+              <th>Very</th><th>long</th><th>set</th><th>of</th><th>columns</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Very</td><td>long</td><td>set</td><td>of</td><td>columns</td>
+              <td>Very</td><td>long</td><td>set</td><td>of</td><td>columns</td>
+              <td>Very</td><td>long</td><td>set</td><td>of</td><td>columns</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Favorite movies</h2>
+      <ul class="list-group">
+        <li class="list-group-item active">Aliens</li>
+        <li class="list-group-item">Terminator</li>
+        <li class="list-group-item">Blade Runner</li>
+        <li class="list-group-item">Lord of the Ring</li>
+        <li class="list-group-item disabled">Star Wars</li>
+      </ul>
+
+      <h2>Favorite Books</h2>
+      <div class="list-group">
+        <a class="list-group-item list-group-item-action active" href="https://en.wikipedia.org/wiki/Dune_(novel)">Dune</a>
+        <a class="list-group-item list-group-item-action" href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings">Lord of the Rings</a>
+        <a class="list-group-item list-group-item-action" href="https://en.wikipedia.org/wiki/The_Forever_War">The Forever War</a>
+        <a class="list-group-item list-group-item-action" href="https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(novel)">Space Odyssey</a>
+        <a class="list-group-item list-group-item-action disabled" href="https://en.wikipedia.org/wiki/Ender%27s_Game">Ender's Game</a>
+      </div>
+
+      <h2>Forms</h2>
+      <div class="mb-3">
+        <label for="input1">Email Address</label>
+        <input type="email" class="form-control" id="input1" placeholder="name@example.com"/>
+      </div>
+      <div class="mb-3">
+        <label for="textarea1" class="form-label">Example textarea</label>
+        <textarea class="form-control" id="textarea1" rows="3"></textarea>
+      </div>
+
+      <h3>Dropdowns</h3>
+      <select class="form-select">
+        <option>Open this select menu</option>
+        <option selected value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <h3>Switches</h3>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="switch1"/>
+        <label class="form-check-label" for="switch1">Default switch checkbox input</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="switch2" checked/>
+        <label class="form-check-label" for="switch2">Checked switch checkbox input</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="switch3" disabled/>
+        <label class="form-check-label" for="switch3">Disabled switch checkbox input</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="switch4" checked disabled/>
+        <label class="form-check-label" for="switch4">Disabled checked switch checkbox input</label>
+      </div>
+
+      <h3>Range</h3>
+      <div>
+        <label for="range1" class="form-label">Example Range</label>
+        <input type="range" min="0" max="5" step="0.5" id="range1" class="form-range"/>
+      </div>
+
+      <h3>Addons</h3>
+      <div class="input-group">
+        <span class="input-group-text">$</span>
+        <span class="input-group-text">0.00</span>
+        <input type="text" class="form-control"/>
+      </div>
+      <div class="input-group">
+        <input type="text" class="form-control"/>
+        <span class="input-group-text">$</span>
+        <span class="input-group-text">0.00</span>
+      </div>
+
+      <h3>Responsive Forms</h3>
+      <div class="mb-3 row">
+        <label for="email1" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="text" id="email1" value="email@example.com" class="form-control"/>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="password1" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input id="password1" type="password" class="form-control"/>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="textarea1" class="col-sm-2" col-form-label>Bio</label>
+        <div class="col-sm-10">
+          <textarea id="textarea1" rows="3" class="form-control"></textarea>
+        </div>
+      </div>
+
+      <h2>Resposnive Forms E2</h2>
+      <form>
+        <div class="mb-3 row">
+          <label for="r1" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input id="r1" type="email" class="form-control"/>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="r2" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input id="r2" type="password" class="form-control"/>
+          </div>
+        </div>
+
+        <fieldset class="mb-3 row">
+          <legend class="col-sm-2 col-from-label pt-0">Radios</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" ir="r3" value="option1"/>
+              <label class="form-check-label" for="r3">First Radio</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="r4" value="option2"/>
+              <label class="form-check-label" for="r4">Second Radio</label>
+            </div>
+            <div class="form-check disabled">
+              <input class="form-check-input" type="radio" name="gridRadios" id="r5" value="option3" disabled/>
+              <label class="form-check-label" for="r5">Third disabled radio</label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="mb-3 row">
+          <div class="col-sm-10 offset-sm-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="r6"/>
+              <label class="form-check-label" for="r6">Example checkbox</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+
+
+    <br/><br/><br/><br/><br/>
     </div>
   </body>
 </html>
