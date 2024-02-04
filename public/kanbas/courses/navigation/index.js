@@ -34,11 +34,10 @@ function CourseNavigation(location) {
     },
   ];
 
-  
   document.write(`
-    <ul style="list-style-type: none; background-color:lightgray; margin:0px; padding:0px">
+    <ul class="course-navigation">
       ${links.map(
-          (link) => `<li style="padding:10px; ${location === link.name ? "border-left: 3px solid green;" : ""}">
+          (link) => `<li class="${location === link.name ? "active" : ""}">
                         <a href="${link.url}">${link.name}</a>
                      </li>`
         ).join("")}

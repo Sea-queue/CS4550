@@ -1,84 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="/kanbas/navigation/index.js"></script>
-    <script src="/kanbas/courses/navigation/index.js"></script>
-    <link rel="stylesheet" href="/kanbas/navigation/index.css"/>
     <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css"/>
+    <script src="/kanbas/navigation/index.js"></script>
+    <link rel="stylesheet" href="/kanbas/navigation/index.css"/>
+    <script src="/kanbas/courses/navigation/index.js"></script>
+    <link rel="stylesheet" href="/kanbas/courses/navigation/index.css"/>
   </head>
   <body>
     <a href="../../index.html">Back Home</a>
-    <div class="card">
-      <img src="images/reactapp.png" class="card-img-top" style="max-height: 150px"/>
-      <div class="card-body">
-        <a class="card-title">
-           CS4500 React APP
-        </a>
-        <p class="card-text">Full Stack software developer</p>
-        <a html="#" class="btn btn-primary">Go</a>
+    <div class="d-flex">
+      <div class="d-none d-sm-block">
+        <script>KanbasNavigation("Courses")</script>
       </div>
-    </div>
-    
-    <table>
-      <tbody>
-        <tr>
-          <td valign="top">
-            <script>
-              KanbasNavigation("Courses");
-            </script>
-          </td>
 
-          <td valign="top">
-            <script>
-              CourseNavigation("Home");
-            </script>
-          </td>
+      <div class="d-none d-sm-block">
+        <script>CourseNavigation("Home")</script>
+      </div>
 
-          <td>
+      <div class="flex-grow-1">
+        <ul>
+          <li>
+            <button type="button">Collapse All</button> 
+            <button type="button">View Progress</button>
+            <select>
+              <option>Publish All</option>
+              <option>a</option>
+              <option>b</option>
+              <option>c</option>
+            </select>
+            <button type="button">Module</button>
+          </li>
+          <ul>
             <ul>
-              <li>
-                <button type="button">Collapse All</button> 
-                <button type="button">View Progress</button>
-                <select>
-                  <option>Publish All</option>
-                  <option>a</option>
-                  <option>b</option>
-                  <option>c</option>
-                </select>
-                <button type="button">Module</button>
-              </li>
+              <li>Week0 Intro</li>
               <ul>
-                <ul>
-                  <li>Week0 Intro</li>
-                  <ul>
-                    <li>Learning Objectives</li>
-                    <li>Reading</li>
-                    <li>Slides</li>
-                  </ul>
-                  <li>Week1 HTML</li>
-                  <ul>
-                    <li>Learning Objectives</li>
-                    <li>Reading</li>
-                    <li>Slides</li>
-                  </ul>
-                </ul>
+                <li>Learning Objectives</li>
+                <li>Reading</li>
+                <li>Slides</li>
+              </ul>
+              <li>Week1 HTML</li>
+              <ul>
+                <li>Learning Objectives</li>
+                <li>Reading</li>
+                <li>Slides</li>
               </ul>
             </ul>
-          </td>
-
-          <td>
-            <ul>
-              <h2>Course Status</h2>
-              <li>
-                <button type="button">Unpublish</button>
-                <button type="button">Pubslished</button>
-              </li>
-              <h2>Comming up</h2>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </ul>
+        </ul>
+      </div>
+      
+      <div class="d-none d-lg-block">
+        <ul>
+          <h2>Course Status</h2>
+          <li>
+            <button type="button">Unpublish</button>
+            <button type="button">Pubslished</button>
+          </li>
+          <h2>Comming up</h2>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>

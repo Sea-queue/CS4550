@@ -5,20 +5,20 @@
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css"/>
     <script src="/kanbas/navigation/index.js"></script>
     <link rel="stylesheet" href="/kanbas/navigation/index.css"/>
+    <script src="/kanbas/account/navigation/index.js"></script>
+    <link rel="stylesheet" href="/kanbas/account/navigation/index.css"/>
   </head>
   <body>
     <a href="../../index.html">Back Home</a>
     <div class="d-flex">
-      <script>KanbasNavigation("Account")</script>
-      <div>
-        <ul>
-          <li><a href="">Notification</a></li>
-          <li><a href="/kanbas/account/profile/screen.html">Profile</a></li>
-          <li><a href="">Files</a></li>
-          <li><a href="">Settings</a></li>
-          <li><a href="">The Hub</a></li>
-        </ul>
+      <div class="d-none d-sm-block">
+        <script>KanbasNavigation("Account")</script>
       </div>
+
+      <div class="d-none d-sm-block">
+        <script>AccountNavigation()</script>
+      </div>
+
     </div>
   </body>
 </html>

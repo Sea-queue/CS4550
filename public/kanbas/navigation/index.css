@@ -1,8 +1,6 @@
 .kanbas-navigation {
   background-color: black;
   color: white;
-  /* get rid of bullets */
-  list-style: none;
   padding: 0px;
   width: 80px;
 }
