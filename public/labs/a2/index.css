@@ -3,21 +3,27 @@ p{
 }
 
 /* 
-- syntax for id is "#" + "name"
-- syntax for class is .class-name
+- syntax for id is: `#id_name`
+- syntax for class is: `.class-name`
 - we should use class to cover everything in CSS, "id" is used for association with "for".
-- header ul li .header_logo: this is containment, 
+
+- `li.active` --> without space ".active" is associated with li, meaning class 'active' is in the li tag.
+  `li .active` --> with space ".active" is the descendant of li tag.
+
+- `.class_name > li` --> just the imediate descendant li, not somehow nested descendant li
+
+- `.class_name ,` --> comma means selecting the tag matching the class name only
+
+- `.class_name *` --> asterisk means selecting the tage matching the class name and everything in side it.
+
+- `header ul li .header_logo` --> this is containment, 
   .header_logo is a class that only applys to the containment that matches the order, meaning
   even .header_logo is included in other places, it won't be applied.
-- li.active:before: without space ".active" is associated with li, meaning in the same tag.
-  li .active: with space ".active" is contained in the li tag.
-- :before: position wise.
 
 - the order matters, later one wins if they are the same level
 - the more specific named style wins over more general ones
 - margin - border - padding - texts
 - margin and padding has no color
-- position: absolute / relevant determin how "top" "left" is parsed.
 - position absolute is calculated to the nearest parent div.
 */
 p#p1{

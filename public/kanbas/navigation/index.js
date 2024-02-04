@@ -1,20 +1,28 @@
 function KanbasNavigation(location) {
   const links = [
     {
+      name: "N",
+      url: "http://northeastern.edu",
+    },
+    {
       name:"Account",
-      url:"/kanbas/account/navigation/index.html"
+      url:"/kanbas/account/navigation/index.html",
+      icon: "fa fa-solid fa-user"
     },
     {
       name:"Dashboard",
-      url:""
+      url:"/kanbas/dashboard/screen.html",
+      icon: "fa fa-tachometer"
     },
     {
       name:"Courses",
-      url:"/kanbas/courses/navigation/index.html"
+      url:"/kanbas/courses/navigation/index.html",
+      icon: "fa fa-solid fa-bell"
     },
     {
       name:"Calendar",
-      url:""
+      url:"",
+      icon:"fa fa-calendar"
     },
     {
       name:"Inbox",
@@ -39,12 +47,16 @@ function KanbasNavigation(location) {
   ];
 
   document.write(`
-    <ul style="width:100px; list-style-type: none; background-color:orange; margin:0px; padding-left:10px">
+    <ul class="kanbas-navigation">
       ${links.map(
-          (link) => `<li style="width:100%; padding:10px; ${location === link.name ? "border-left: 3px solid green;" : ""}">
-                        <a href="${link.url}">${link.name}</a>
+          (link) => `<li class=${location === link.name ? "active" : ""}>
+                        <a href="${link.url}">
+                          <i class="${link.icon}"></i>
+                          ${link.name}
+                        </a>
                      </li>`
         ).join("")}
     </ul>
   `)
+
 }

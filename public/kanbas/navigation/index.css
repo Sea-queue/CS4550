@@ -1,0 +1,35 @@
+.kanbas-navigation {
+  background-color: black;
+  color: white;
+  /* get rid of bullets */
+  list-style: none;
+  padding: 0px;
+  width: 80px;
+}
+
+.kanbas-navigation li {
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.kanbas-navigation li.active {
+  background-color: white;
+}
+
+.kanbas-navigation li.active a {
+  color: red;
+}
+
+.kanbas-navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.kanbas-navigation a i {
+  color: red;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
