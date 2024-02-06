@@ -30,3 +30,10 @@
 .modules > li {
   margin-bottom: 20px;
 }
+
+.course-status {
+  background-color: lightgray;
+  border: none;
+  margin-left: 5px;
+  padding: 5px;
+}
