@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css"/>
+    <script src="/kanbas/navigation/index.js"></script>
+    <link rel="stylesheet" href="/kanbas/navigation/index.css"/>
+    <script src="/kanbas/courses/navigation/index.js"></script>
+    <link rel="stylesheet" href="/kanbas/courses/navigation/index.css"/>
+  </head>
+  <body>
+    <a href="../../index.html">Back Home</a>
+    <div class="d-flex">
+      <div class="d-none d-sm-block">
+        <script>KanbasNavigation("Courses")</script>
+      </div>
+
+      <div class="d-none d-sm-block">
+        <script>CourseNavigation("Home")</script>
+      </div>
+
+      <div class="flex-fill">
+        <ul>
+          <li>
+            <button type="button">Collapse All</button> 
+            <button type="button">View Progress</button>
+            <select>
+              <option>Publish All</option>
+              <option>a</option>
+              <option>b</option>
+              <option>c</option>
+            </select>
+            <button type="button">Module</button>
+          </li>
+          <ul>
+            <ul>
+              <li>Week0 Intro</li>
+              <ul>
+                <li>Learning Objectives</li>
+                <li>Reading</li>
+                <li>Slides</li>
+              </ul>
+              <li>Week1 HTML</li>
+              <ul>
+                <li>Learning Objectives</li>
+                <li>Reading</li>
+                <li>Slides</li>
+              </ul>
+            </ul>
+          </ul>
+        </ul>
+      </div>
+      
+      <div class="d-none d-lg-block flex-grow-0 me-2" style="width: 250px">
+        <ul>
+          <h2>Course Status</h2>
+          <li>
+            <button type="button">Unpublish</button>
+            <button type="button">Pubslished</button>
+          </li>
+          <h2>Comming up</h2>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
