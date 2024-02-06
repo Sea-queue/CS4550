@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="/kanbas/navigation/index.css"/>
     <script src="/kanbas/courses/navigation/index.js"></script>
     <link rel="stylesheet" href="/kanbas/courses/navigation/index.css"/>
+    <script src="/kanbas/navigation/header.js"></script>
   </head>
   <body>
     <a href="/public/index.html">Back Home</a>
+    <div class="d-md-none d-block">
+      <script>Header()</script>
+    </div>
+
     <div class="d-flex">
-      <div class="d-none d-sm-block">
+      <div class="d-none d-md-block">
         <script>KanbasNavigation("Courses")</script>
       </div>
 
-      <div class="d-none d-sm-block">
+      <div class="d-none d-md-block">
         <script>CourseNavigation("Assignments")</script>
       </div>
 

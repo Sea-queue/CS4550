@@ -7,60 +7,82 @@
     <link rel="stylesheet" href="/kanbas/navigation/index.css"/>
     <script src="/kanbas/courses/navigation/index.js"></script>
     <link rel="stylesheet" href="/kanbas/courses/navigation/index.css"/>
+    <link rel="stylesheet" href="/kanbas/courses/modules/index.css"/>
+    <link rel="stylesheet" href="/kanbas/courses/home/index.css"/>
+    <script src="/kanbas/navigation/header.js"></script>
   </head>
   <body>
     <a href="/public/index.html">Back Home</a>
+    <div class="d-md-none d-block">
+      <script>Header()</script>
+    </div>
+
     <div class="d-flex">
-      <div class="d-none d-sm-block">
+      <div class="d-none d-md-block">
         <script>KanbasNavigation("Courses")</script>
       </div>
 
-      <div class="d-none d-sm-block">
+      <div class="d-none d-md-block">
         <script>CourseNavigation("Home")</script>
       </div>
 
       <div class="flex-fill">
-        <ul>
-          <li>
-            <button type="button">Collapse All</button> 
-            <button type="button">View Progress</button>
-            <select>
-              <option>Publish All</option>
-              <option>a</option>
-              <option>b</option>
-              <option>c</option>
-            </select>
-            <button type="button">Module</button>
-          </li>
-          <ul>
-            <ul>
-              <li>Week0 Intro</li>
-              <ul>
-                <li>Learning Objectives</li>
-                <li>Reading</li>
-                <li>Slides</li>
-              </ul>
-              <li>Week1 HTML</li>
-              <ul>
-                <li>Learning Objectives</li>
-                <li>Reading</li>
-                <li>Slides</li>
-              </ul>
+        <button type="button" class="btn btn-warning">Collapse All</button> 
+        <button type="button" class="btn btn-info">View Progress</button>
+        <select class="form-select-sm">
+          <option>Publish All</option>
+          <option>a</option>
+          <option>b</option>
+          <option>c</option>
+        </select>
+        <button type="button" class="btn btn-primary">Module</button>
+        
+        <hr/>
+
+        <ul class="list-group modules">
+          <li class="list-group-item">
+            <div>
+              <i class="fa fa-ellipsis-v"></i>
+              Week 1
+              <span class="float-end">
+                <i class="fa fa-check-circle text-sucess"></i>
+                <i class="fa fa-plus ms-2"></i>
+                <i class="fa fa-ellipsis-v ms-2"></i>
+              </span>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <i class="fa fa-ellipsis-v"></i>
+                Learning Objective
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-sucess"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
             </ul>
-          </ul>
+          </li>
+
+          <li class="list-group-item">
+            <div>
+              <i class="fa fa-ellipsis-v"></i>
+              Week 2
+              <span class="float-end">
+                <i class="fa fa-check-circle text-sucess"></i>
+                <i class="fa fa-plus ms-2"></i>
+                <i class="fa fa-ellipsis-v ms-2"></i>
+              </span>
+            </div>
+          </li>
         </ul>
       </div>
       
-      <div class="d-none d-lg-block flex-grow-0 me-2" style="width: 250px">
-        <ul>
-          <h2>Course Status</h2>
-          <li>
-            <button type="button">Unpublish</button>
-            <button type="button">Pubslished</button>
-          </li>
-          <h2>Comming up</h2>
-        </ul>
+      <div class="d-none d-lg-block flex-grow-0 me-2 course-status" style="width: 250px">
+        <h4>Course Status</h4>
+        <button type="button" class="btn btn-info">Unpublish</button>
+        <button type="button" class="btn btn-info">Pubslished</button>
+        <h4>Comming up</h4>
       </div>
+
     </div>
   </body>
 </html>
