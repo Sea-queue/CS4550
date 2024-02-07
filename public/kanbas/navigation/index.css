@@ -31,3 +31,13 @@
   font-size: 2em;
   margin-bottom: 5px;
 }
+
+.header {
+  background-color: white;
+  padding-left: 5px;
+}
+
+.header a {
+  color: red;
+  text-decoration: none;
+}
