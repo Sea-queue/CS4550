@@ -16,6 +16,11 @@ import JsonStringify from "./Json/JsonStringify";
 import FindFunction from "./Arrays/FindFunction";
 import FindIndex from "./Arrays/FindIndex";
 import FilterFunction from "./Arrays/FilterFunction";
+import TemplateLiterals from "./String/TemplateLiterals";
+import House from "./Json/House";
+import Spreading from "./Json/Spreading";
+import Destructing from "./Json/Destructing";
+import FunctionDestructing from "./Functions/FunctionDestructing";
 
 function JavaScript() {
   console.log("hello from Seaqueue!");
@@ -40,6 +45,11 @@ function JavaScript() {
       <FindFunction />
       <FindIndex />
       <FilterFunction />
+      <TemplateLiterals />
+      <House />
+      <Spreading />
+      <Destructing />
+      <FunctionDestructing />
     </div>
   );
 }
