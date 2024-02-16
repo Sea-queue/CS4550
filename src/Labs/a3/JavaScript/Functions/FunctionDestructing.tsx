@@ -4,6 +4,18 @@ function FunctionDestructing() {
   const subtract = ({ a, b }: { a: number; b: number }) => a - b;
   const difference = subtract({ a: 4, b: 2 });
 
+  const multiply_1 = (obj: { a: number; b: number }) => {
+    return obj.a * obj.b;
+  };
+
+  const multiply_2 = (obj: { a: number; b: number }) => {
+    const { a, b } = obj;
+    return a * b;
+  };
+
+  // modern way to code
+  const multiply_3 = ({ a, b }: { a: number; b: number }) => a * b;
+
   return (
     <>
       <h2>Function Destructing</h2>
