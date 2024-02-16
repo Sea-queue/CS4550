@@ -26,7 +26,7 @@ function JavaScript() {
   console.log("hello from Seaqueue!");
   return (
     <div>
-      <h1>javaScript</h1>
+      <h1>TypeScript</h1>
       <VariablesAndConstants />
       <VariableTypes />
       <BooleanVariable />

@@ -12,6 +12,7 @@ function App() {
       <div className="ml-3">
         <Navigation />
         <Routes>
+          <Route path="/" element={<Navigate to="/Kanbas" />} />
           <Route path="/Hello" element={<HelloWorld />} />
           {/* "/*" allows to nest the routes in this path to break down to multiple pages further */}
           <Route path="/Labs/*" element={<Labs />} />
