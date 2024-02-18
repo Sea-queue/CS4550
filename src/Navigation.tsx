@@ -1,14 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navigation() {
+  const { pathname } = useLocation();
   return (
-    <nav className="nav nav-tabs mt-2 justify-content-center">
-      <Link className="nav-link" to="/Labs/a3">
-        TypeScript Fundamentals
+    <nav className="nav nav-tabs nav-pills nav-fill mt-2">
+      <Link
+        className={`nav-link ${pathname.includes("a3") ? "active" : ""}`}
+        to="/Labs/a3"
+      >
+        Assigment 3
       </Link>
       <br />
-      <Link className="nav-link" to="/Kanbas">
-        Student Portal
+      <Link
+        className={`nav-link ${pathname.includes("Kanbas") ? "active" : ""}`}
+        to="/Kanbas"
+      >
+        Kanbas
+      </Link>
+      <br />
+      <Link
+        className={`nav-link ${pathname.includes("Hello") ? "active" : ""}`}
+        to="/Hello"
+      >
+        Greeting
       </Link>
     </nav>
   );

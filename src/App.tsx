@@ -10,7 +10,6 @@ function App() {
   return (
     <HashRouter>
       <div className="ml-3">
-        <Navigation />
         <Routes>
           <Route path="/" element={<Navigate to="/Kanbas" />} />
           <Route path="/Hello" element={<HelloWorld />} />
