@@ -10,8 +10,9 @@ function App() {
   return (
     <HashRouter>
       <div className="ml-3">
-        <Navigation />
         <Routes>
+          {/* TODO: why Navigate when putting element here is also works */}
+          <Route path="/" element={<Navigate to="/Labs" />} />
           <Route path="/Hello" element={<HelloWorld />} />
           {/* "/*" allows to nest the routes in this path to break down to multiple pages further */}
           <Route path="/Labs/*" element={<Labs />} />
