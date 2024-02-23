@@ -10,7 +10,6 @@ import TodoList from "./Todos/TodoList";
 function Assignment3() {
   return (
     <div className="container">
-      <h1>Assignment 3</h1>
       <TodoList />
       <Add a={3} b={4} />
       <Highlight>

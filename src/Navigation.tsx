@@ -8,14 +8,14 @@ function Navigation() {
         className={`nav-link ${pathname.includes("a3") ? "active" : ""}`}
         to="/Labs/a3"
       >
-        Assigment 3
+        JS/TS fundamentals
       </Link>
       <br />
       <Link
         className={`nav-link ${pathname.includes("Kanbas") ? "active" : ""}`}
         to="/Kanbas"
       >
-        Kanbas
+        Student Portal
       </Link>
       <br />
       <Link
