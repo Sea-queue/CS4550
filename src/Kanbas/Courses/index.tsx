@@ -18,9 +18,9 @@ function Courses() {
       <hr />
       <div className="d-flex">
         <CourseNavigation />
-        <div className="overflow-y-scroll bottom-0 end-0">
+        <div className="overflow-y-scroll bottom-0 end-0 flex-fill">
           <Routes>
-            <Route path="/" element={<Navigate to="Home" />} />
+            <Route path="/" element={<Navigate to={`${courseId}/Home`} />} />
             <Route path="Home" element={<Home />} />
             <Route path="Modules" element={<Modules />} />
             <Route path="Piazza" element={<h1>Piazza</h1>} />

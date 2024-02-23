@@ -2,7 +2,7 @@ import ModuleList from "./List";
 
 function Modules() {
   return (
-    <div>
+    <div className="d-flex">
       <ModuleList />
     </div>
   );

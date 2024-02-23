@@ -8,7 +8,7 @@ function ModuleList() {
   const modulesList = modules.filter((module) => module.course === courseId);
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
-    <div className="p-2">
+    <div className="flex-fill">
       <button type="button" className="btn btn-warning">
         Collapse All
       </button>
