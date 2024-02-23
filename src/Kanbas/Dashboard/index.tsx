@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { courses } from "../Database";
-import reactapp from "./images/reactapp.png";
 
 function Dashboard() {
   return (
