@@ -1,0 +1,39 @@
+.modules,
+.modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.modules {
+  margin: 5px;
+}
+
+.modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.modules > li {
+  margin-bottom: 20px;
+}
+
+.course-status {
+  background-color: lightgray;
+  border: none;
+  margin-left: 5px;
+  padding: 5px;
+}
