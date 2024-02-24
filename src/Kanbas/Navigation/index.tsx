@@ -6,6 +6,7 @@ import {
 } from "react-icons/fa";
 import "./index.css";
 import { Link, useLocation } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
 
 function KanbasNavigation() {
   const links = [

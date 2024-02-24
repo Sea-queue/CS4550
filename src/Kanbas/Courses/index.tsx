@@ -8,7 +8,6 @@ import Assignments from "./Assignments";
 
 function Courses() {
   const { courseId = "RS101" } = useParams();
-  console.log("checking:", courseId);
   const course = courses.find((course) => course._id === courseId);
   return (
     <div>
@@ -17,7 +16,9 @@ function Courses() {
       </h2>
       <hr />
       <div className="d-flex">
-        <CourseNavigation />
+        <div className="d-none d-md-block">
+          <CourseNavigation />
+        </div>
         <div className="overflow-y-scroll bottom-0 end-0 flex-fill">
           <Routes>
             <Route path="/" element={<Navigate to={`${courseId}/Home`} />} />
