@@ -3,9 +3,13 @@ import {
   FaTachometerAlt,
   FaBook,
   FaRegCalendarAlt,
+  FaVideo,
+  FaHandshake,
+  FaInbox,
 } from "react-icons/fa";
 import "./index.css";
 import { Link, useLocation } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
 
 function KanbasNavigation() {
   const links = [
@@ -13,6 +17,9 @@ function KanbasNavigation() {
     { label: "Dashboard", icon: <FaTachometerAlt className="fs-2" /> },
     { label: "Courses", icon: <FaBook className="fs-2" /> },
     { label: "Calendar", icon: <FaRegCalendarAlt className="fs-2" /> },
+    { label: "Zoom", icon: <FaVideo className="fs-2" /> },
+    { label: "Inbox", icon: <FaInbox className="fs-2" /> },
+    { label: "Help", icon: <FaHandshake className="fs-2" /> },
   ];
 
   const { pathname } = useLocation();

@@ -3,14 +3,20 @@ import Navigation from "../Navigation";
 import KanbasNavigation from "./Navigation";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
+import Header from "./Navigation/header";
 
 function Kanbas() {
   return (
     <>
       <Navigation />
       <div className="d-flex">
-        <KanbasNavigation />
+        <div className="d-none d-md-block">
+          <KanbasNavigation />
+        </div>
         <div style={{ flexGrow: 1 }}>
+          <div className="d-md-none d-block">
+            <Header />
+          </div>
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
             <Route path="Account" element={<h1>Account</h1>} />
