@@ -12,79 +12,79 @@ import ReactFlow, {
 import "reactflow/dist/style.css";
 
 const initialNodes = [
-  { id: "n1", position: { x: 100, y: 100 }, data: { label: "Inputs" } },
+  { id: "n1", position: { x: 200, y: 100 }, data: { label: "Inputs" } },
   {
     id: "n1-1",
-    position: { x: -100, y: 0 },
+    position: { x: 0, y: 0 },
     data: { label: "Training Data" },
   },
   {
     id: "n1-2",
-    position: { x: -100, y: 100 },
+    position: { x: 0, y: 100 },
     data: { label: "Validation Data" },
   },
   {
     id: "n1-3",
-    position: { x: -100, y: 200 },
+    position: { x: 0, y: 200 },
     data: { label: "Testing Data" },
   },
-  { id: "n2", position: { x: 300, y: 100 }, data: { label: "Dense Layers" } },
-  { id: "n2-1", position: { x: 300, y: 250 }, data: { label: "ReLU" } },
-  { id: "n3", position: { x: 500, y: 100 }, data: { label: "Output layer" } },
-  { id: "n3-1", position: { x: 500, y: 250 }, data: { label: "SoftMax" } },
-  { id: "n4", position: { x: 700, y: 100 }, data: { label: "Loss Function" } },
+  { id: "n2", position: { x: 400, y: 100 }, data: { label: "Dense Layers" } },
+  { id: "n2-1", position: { x: 400, y: 250 }, data: { label: "ReLU" } },
+  { id: "n3", position: { x: 600, y: 100 }, data: { label: "Output layer" } },
+  { id: "n3-1", position: { x: 600, y: 250 }, data: { label: "SoftMax" } },
+  { id: "n4", position: { x: 800, y: 100 }, data: { label: "Loss Function" } },
   {
     id: "n4-1",
-    position: { x: 700, y: 250 },
+    position: { x: 800, y: 250 },
     data: { label: "L1 / L2 Regularization" },
   },
 
-  { id: "n5", position: { x: 900, y: 100 }, data: { label: "Accuracy" } },
+  { id: "n5", position: { x: 1000, y: 100 }, data: { label: "Accuracy" } },
 
   {
     id: "n6",
-    position: { x: 700, y: 400 },
+    position: { x: 800, y: 400 },
     data: { label: "Back Propagation" },
   },
 
   {
     id: "n6-1",
-    position: { x: 900, y: 300 },
+    position: { x: 1000, y: 300 },
     data: { label: "Derivative / Partial Derivative" },
   },
 
   {
     id: "n6-2",
-    position: { x: 900, y: 400 },
+    position: { x: 1000, y: 400 },
     data: { label: "Gradient" },
   },
 
   {
     id: "n6-3",
-    position: { x: 900, y: 500 },
+    position: { x: 1000, y: 500 },
     data: { label: "Chain Rule" },
   },
 
-  { id: "n7", position: { x: 700, y: 600 }, data: { label: "Optimization" } },
+  { id: "n7", position: { x: 800, y: 600 }, data: { label: "Optimization" } },
 
   {
     id: "n7-1",
-    position: { x: 400, y: 700 },
+    position: { x: 500, y: 700 },
     data: { label: "Optimizer-SGD" },
   },
   {
     id: "n7-2",
-    position: { x: 600, y: 700 },
+    position: { x: 700, y: 700 },
     data: { label: "Optimizer-Adam" },
   },
   {
     id: "n7-3",
-    position: { x: 800, y: 700 },
+    position: { x: 900, y: 700 },
     data: { label: "Optimizer-Adagrad" },
   },
   {
     id: "n7-4",
-    position: { x: 1000, y: 700 },
+    position: { x: 1100, y: 700 },
     data: { label: "Optimizer-RMSprop" },
   },
 ];
