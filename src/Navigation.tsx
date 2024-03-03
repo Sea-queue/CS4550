@@ -26,10 +26,10 @@ function Navigation() {
       </Link>
       <br />
       <Link
-        className={`nav-link ${pathname.includes("Hello") ? "active" : ""}`}
-        to="/Hello"
+        className={`nav-link ${pathname.includes("AI") ? "active" : ""}`}
+        to="/AI"
       >
-        Greeting
+        Neural Network
       </Link>
     </nav>
   );
