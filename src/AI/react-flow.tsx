@@ -43,48 +43,42 @@ const initialNodes = [
 
   {
     id: "n6",
-    position: { x: 800, y: 400 },
+    position: { x: 800, y: 450 },
     data: { label: "Back Propagation" },
   },
 
   {
     id: "n6-1",
-    position: { x: 1000, y: 300 },
-    data: { label: "Derivative / Partial Derivative" },
+    position: { x: 1000, y: 350 },
+    data: { label: "Gradient (Partial Derivative)" },
   },
 
   {
     id: "n6-2",
-    position: { x: 1000, y: 400 },
-    data: { label: "Gradient" },
-  },
-
-  {
-    id: "n6-3",
-    position: { x: 1000, y: 500 },
+    position: { x: 1000, y: 550 },
     data: { label: "Chain Rule" },
   },
 
-  { id: "n7", position: { x: 800, y: 600 }, data: { label: "Optimization" } },
+  { id: "n7", position: { x: 800, y: 650 }, data: { label: "Optimization" } },
 
   {
     id: "n7-1",
-    position: { x: 500, y: 700 },
+    position: { x: 500, y: 750 },
     data: { label: "Optimizer-SGD" },
   },
   {
     id: "n7-2",
-    position: { x: 700, y: 700 },
+    position: { x: 700, y: 750 },
     data: { label: "Optimizer-Adam" },
   },
   {
     id: "n7-3",
-    position: { x: 900, y: 700 },
+    position: { x: 900, y: 750 },
     data: { label: "Optimizer-Adagrad" },
   },
   {
     id: "n7-4",
-    position: { x: 1100, y: 700 },
+    position: { x: 1100, y: 750 },
     data: { label: "Optimizer-RMSprop" },
   },
 ];
@@ -107,10 +101,9 @@ const initialEdges = [
   { id: "e6-1", source: "n2-1", target: "n6" }, // BP - ReLU
   { id: "e6-2", source: "n3-1", target: "n6" }, // BP - SoftMax
   { id: "e6-3", source: "n4-1", target: "n6" }, // BP - L1/L2
-  { id: "e6-4", source: "n6-1", target: "n6" }, // BP - Derivarive
-  { id: "e6-5", source: "n6", target: "n6-2" }, // BP - Gradient
-  { id: "e6-6", source: "n6", target: "n6-3" }, // BP - Chain rule
-  { id: "e6-7", source: "n6", target: "n7" }, // BP - Optimization
+  { id: "e6-4", source: "n6-1", target: "n6" }, // BP - Grdient
+  { id: "e6-5", source: "n6", target: "n6-2" }, // BP - Chain Rule
+  { id: "e6-6", source: "n6", target: "n7" }, // BP - Optimization
 
   { id: "e7-1", source: "n7", target: "n7-1" }, // Optimization - SGD
   { id: "e7-2", source: "n7", target: "n7-2" }, // Optimization - Adam
