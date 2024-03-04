@@ -12,103 +12,139 @@ import ReactFlow, {
 import "reactflow/dist/style.css";
 
 const initialNodes = [
-  { id: "n1", position: { x: 200, y: 100 }, data: { label: "Inputs" } },
+  { id: "inputs", position: { x: 200, y: 100 }, data: { label: "Inputs" } },
+
   {
-    id: "n1-1",
+    id: "training",
     position: { x: 0, y: 0 },
     data: { label: "Training Data" },
   },
   {
-    id: "n1-2",
-    position: { x: 0, y: 100 },
+    id: "validation",
+    position: { x: 0, y: 200 },
     data: { label: "Validation Data" },
   },
   {
-    id: "n1-3",
-    position: { x: 0, y: 200 },
+    id: "testing",
+    position: { x: 0, y: 350 },
     data: { label: "Testing Data" },
   },
-  { id: "n2", position: { x: 400, y: 100 }, data: { label: "Dense Layers" } },
-  { id: "n2-1", position: { x: 400, y: 250 }, data: { label: "ReLU" } },
-  { id: "n3", position: { x: 600, y: 100 }, data: { label: "Output layer" } },
-  { id: "n3-1", position: { x: 600, y: 250 }, data: { label: "SoftMax" } },
-  { id: "n4", position: { x: 800, y: 100 }, data: { label: "Loss Function" } },
+
   {
-    id: "n4-1",
-    position: { x: 800, y: 250 },
+    id: "dense-layer",
+    position: { x: 400, y: 100 },
+    data: { label: "Dense Layers" },
+  },
+
+  { id: "relu", position: { x: 400, y: 250 }, data: { label: "ReLU" } },
+
+  {
+    id: "dropout",
+    position: { x: 600, y: 100 },
+    data: { label: "Dropout Layer" },
+  },
+
+  {
+    id: "output",
+    position: { x: 800, y: 100 },
+    data: { label: "Output layer" },
+  },
+
+  { id: "softmax", position: { x: 800, y: 250 }, data: { label: "SoftMax" } },
+
+  {
+    id: "loss",
+    position: { x: 1000, y: 100 },
+    data: { label: "Loss Function" },
+  },
+
+  {
+    id: "l1l2",
+    position: { x: 1000, y: 250 },
     data: { label: "L1 / L2 Regularization" },
   },
 
-  { id: "n5", position: { x: 1000, y: 100 }, data: { label: "Accuracy" } },
+  {
+    id: "accuracy",
+    position: { x: 1200, y: 100 },
+    data: { label: "Accuracy" },
+  },
 
   {
-    id: "n6",
-    position: { x: 800, y: 450 },
+    id: "back",
+    position: { x: 800, y: 500 },
     data: { label: "Back Propagation" },
   },
 
   {
-    id: "n6-1",
-    position: { x: 1000, y: 350 },
+    id: "gradient",
+    position: { x: 1000, y: 400 },
     data: { label: "Gradient (Partial Derivative)" },
   },
 
   {
-    id: "n6-2",
-    position: { x: 1000, y: 550 },
+    id: "chain-rule",
+    position: { x: 1000, y: 600 },
     data: { label: "Chain Rule" },
   },
 
-  { id: "n7", position: { x: 800, y: 650 }, data: { label: "Optimization" } },
+  {
+    id: "optimization",
+    position: { x: 800, y: 650 },
+    data: { label: "Optimization" },
+  },
 
   {
-    id: "n7-1",
+    id: "sgd",
     position: { x: 500, y: 750 },
     data: { label: "Optimizer-SGD" },
   },
   {
-    id: "n7-2",
+    id: "adam",
     position: { x: 700, y: 750 },
     data: { label: "Optimizer-Adam" },
   },
   {
-    id: "n7-3",
+    id: "adagrad",
     position: { x: 900, y: 750 },
     data: { label: "Optimizer-Adagrad" },
   },
   {
-    id: "n7-4",
+    id: "rmsprop",
     position: { x: 1100, y: 750 },
     data: { label: "Optimizer-RMSprop" },
   },
 ];
 
 const initialEdges = [
-  { id: "e1", source: "n1", target: "n2" }, // input - dense layer
-  { id: "e1-1", source: "n1-1", target: "n1" }, // training - input
-  { id: "e1-2", source: "n1", target: "n1-2" }, // validation - input
-  { id: "e1-3", source: "n1", target: "n1-3" }, // testing -input
+  { id: "input-dense", source: "inputs", target: "dense-layer" },
+  { id: "training-input", source: "training", target: "inputs" },
+  { id: "validation-input", source: "inputs", target: "validation" },
+  { id: "testing-input", source: "inputs", target: "testing" },
 
-  { id: "e2", source: "n2", target: "n3" }, // Dense Layers - output layer
-  { id: "e2-1", source: "n2", target: "n2-1" }, // Dense Layers - ReLU
+  { id: "dense-dropout", source: "dense-layer", target: "dropout" },
+  { id: "dense-relu", source: "dense-layer", target: "relu" },
 
-  { id: "e3", source: "n3", target: "n4" }, // Output layer - Loss
-  { id: "e3-1", source: "n3", target: "n3-1" }, // Output layer - SoftMax
+  { id: "dropout-output", source: "dropout", target: "output" },
 
-  { id: "e4", source: "n4", target: "n5" }, // Loss - Accuracy
-  { id: "e4-1", source: "n4", target: "n4-1" }, // Loss - L1/L2
+  { id: "output-loss", source: "output", target: "loss" },
+  { id: "output-sofmax", source: "output", target: "softmax" },
 
-  { id: "e6-1", source: "n2-1", target: "n6" }, // BP - ReLU
-  { id: "e6-2", source: "n3-1", target: "n6" }, // BP - SoftMax
-  { id: "e6-3", source: "n4-1", target: "n6" }, // BP - L1/L2
-  { id: "e6-4", source: "n6-1", target: "n6" }, // BP - Grdient
-  { id: "e6-5", source: "n6", target: "n6-2" }, // BP - Chain Rule
-  { id: "e6-6", source: "n6", target: "n7" }, // BP - Optimization
+  { id: "loss-accuracy", source: "loss", target: "accuracy" },
+  { id: "loss-l1l2", source: "loss", target: "l1l2" },
 
-  { id: "e7-1", source: "n7", target: "n7-1" }, // Optimization - SGD
-  { id: "e7-2", source: "n7", target: "n7-2" }, // Optimization - Adam
-  { id: "e7-3", source: "n7", target: "n7-3" }, // Optimization - Adagrad
-  { id: "e7-4", source: "n7", target: "n7-4" }, // Optimization - RMSprop
+  { id: "bp-relu", source: "relu", target: "back" },
+  { id: "bp-dropout", source: "dropout", target: "back" },
+  { id: "bp-softmax", source: "softmax", target: "back" },
+  { id: "bp-l1l2", source: "l1l2", target: "back" },
+  { id: "bp-gradient", source: "gradient", target: "back" },
+  { id: "bp-chain", source: "back", target: "chain-rule" },
+  { id: "bp-optimization", source: "back", target: "optimization" },
+
+  { id: "opti-sgd", source: "optimization", target: "sgd" },
+  { id: "opti-adam", source: "optimization", target: "adam" },
+  { id: "opti-adagrad", source: "optimization", target: "adagrad" },
+  { id: "opti-rmsprop", source: "optimization", target: "rmsprop" },
 ];
 
 function Flow() {
