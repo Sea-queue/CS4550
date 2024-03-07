@@ -31,7 +31,7 @@ const initialNodes = [
   {
     id: "matrix-product",
     position: { x: 550, y: -100 },
-    data: { label: "Matrix Product" },
+    data: { label: "Matrix Product & Addition on Inputs & Weights, Biases" },
   },
 
   {
