@@ -29,6 +29,12 @@ const initialNodes = [
   },
 
   {
+    id: "matrix-product",
+    position: { x: 550, y: -100 },
+    data: { label: "Matrix Product" },
+  },
+
+  {
     id: "dense-layer",
     position: { x: 400, y: 100 },
     data: { label: "Dense Layers" },
@@ -133,6 +139,11 @@ const initialEdges = [
   { id: "training-input", source: "training", target: "inputs" },
   { id: "validation-input", source: "inputs", target: "validation" },
   { id: "testing-input", source: "inputs", target: "testing" },
+
+  { id: "matrix-input", source: "matrix-product", target: "inputs" },
+  { id: "matrix-layer", source: "matrix-product", target: "dense-layer" },
+  { id: "matrix-dropout", source: "matrix-product", target: "dropout" },
+  { id: "matrix-output", source: "matrix-product", target: "output" },
 
   { id: "dense-dropout", source: "dense-layer", target: "dropout" },
   { id: "dense-relu", source: "dense-layer", target: "relu" },
