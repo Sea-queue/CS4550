@@ -5,8 +5,21 @@ import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modulesList = modules.filter((module) => module.course === courseId);
+  const [module, setModule] = useState({
+    name: "New Module",
+    description: "New Description",
+    course: courseId,
+  });
+  const [moduleList, setModuleList] = useState<any[]>(modules);
+  // const modulesList = modules.filter((module) => module.course === courseId);
+  const modulesList = moduleList.filter((module) => module.course === courseId);
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
+
+  const addModule = (module: any) => {
+    const newModule = { ...module, _id: new Date().getTime().toString() };
+    const newModuleList = [newModule, ...moduleList];
+    setModuleList(newModuleList);
+  };
   return (
     <div className="flex-fill">
       <button type="button" className="btn btn-warning">
@@ -27,6 +40,36 @@ function ModuleList() {
 
       <hr />
       <ul className="list-group modules">
+        <div className="input-group mb-3">
+          <input
+            value={module.name}
+            onChange={(e) =>
+              setModule({
+                ...module,
+                name: e.target.value,
+              })
+            }
+            className="border border-2 border-dark me-2"
+          />
+          <textarea
+            value={module.description}
+            onChange={(e) =>
+              setModule({
+                ...module,
+                description: e.target.value,
+              })
+            }
+            className="border border-2 border-dark ms-2"
+          />
+          <button
+            onClick={() => {
+              addModule(module);
+            }}
+            className="btn btn-primary ms-2"
+          >
+            Add
+          </button>
+        </div>
         {modulesList.map((module, index) => (
           <li
             key={index}
@@ -44,7 +87,7 @@ function ModuleList() {
             </div>
             {selectedModule._id === module._id && (
               <ul className="list-group">
-                {module.lessons?.map((lesson, index) => (
+                {module.lessons?.map((lesson: any, index: any) => (
                   <li key={index} className="list-group-item">
                     <FaEllipsisV className="me-2" />
                     {lesson.name}

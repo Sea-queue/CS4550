@@ -4,8 +4,38 @@ import KanbasNavigation from "./Navigation";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import Header from "./Navigation/header";
+import { useState } from "react";
+import { courses_db } from "./Database";
 
 function Kanbas() {
+  const [courses, setCourses] = useState(courses_db);
+  const [course, setCourse] = useState({
+    _id: "0",
+    name: "New Course",
+    number: "New Number",
+    startDate: "2023-09-10",
+    endDate: "2023-12-15",
+    image: "reactapp.png",
+  });
+  const addNewCourse = () => {
+    const newCourse = { ...course, _id: new Date().getTime().toString() };
+    setCourses([...courses, { ...course, ...newCourse }]);
+  };
+  const deleteCourse = (courseId: string) => {
+    setCourses(courses.filter((course) => course._id !== courseId));
+  };
+
+  const updateCourse = () => {
+    setCourses(
+      courses.map((db_course) => {
+        if (db_course._id === course._id) {
+          return course;
+        } else {
+          return db_course;
+        }
+      })
+    );
+  };
   return (
     <>
       <Navigation />
@@ -20,9 +50,25 @@ function Kanbas() {
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
             <Route path="Account" element={<h1>Account</h1>} />
-            <Route path="Dashboard" element={<Dashboard />} />
-            <Route path="Courses/*" element={<Courses />} />
-            <Route path="Courses/:courseId/*" element={<Courses />} />
+            <Route
+              path="Dashboard"
+              element={
+                <Dashboard
+                  courses={courses}
+                  course={course}
+                  setCourse={setCourse}
+                  addNewCourse={addNewCourse}
+                  deleteCourse={deleteCourse}
+                  updateCourse={updateCourse}
+                />
+              }
+            />
+            {/* TODO: fix this route */}
+            <Route path="Courses/*" element={<Courses courses={courses} />} />
+            <Route
+              path="Courses/:courseId/*"
+              element={<Courses courses={courses} />}
+            />
           </Routes>
         </div>
       </div>
