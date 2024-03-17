@@ -1,0 +1,236 @@
+<html>
+  <head>
+    <title>Lab 1</title>
+    <script>
+      document.write("hello world!")
+      for (let i = 0; i < 5; i++) {
+        document.write(i)
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Anchor Tag: to navigate to other pages or websites -->
+    <a href="/index.html">Back Home</a>
+    <h1>HTML Examples</h1>
+    <h2>Heading Tags</h2>
+    Text documents are often broken up into several sections and subsections. Each section is usually prefaced with a short title or heading that attempts to summarize the topic of the section it precedes. For instance this paragraph is preceded by the heading Heading Tags. The font of the section headings are usually larger and bolder than the plain text and their subsection headings. This document uses headings to introduce topics such as HTML Documents, HTML Tags, Heading Tags, etc. HTML heading tags can be used to format plain text so that it renders in a browser as large headings. There are 6 heading tags: h1, h2, h3, h4, h5, and h6. Tag h1 is the largest heading and h6 is the smallest heading.
+   
+    <h2>Paragraph Tag</h2>
+    <p>
+      This is a paragraph. We often separate a long set of sentences with vertical spaces to make the text easier to read. Browsers ignore vertical white spaces and render all the text as one single set of sentences. To force the browser to add vertical spacing, wrap the paragraphs you want to separate with the paragraph tag
+    </p>
+
+    This is the first paragraph. The paragraph tag is used to format vertical gaps between long pieces of text like this one.
+
+    This is the second paragraph. Even though we added a deliberate gap between the paragraph above and this paragraph, by default browsers render them as one contiguous piece of text as shown here on the right.
+
+    This is the third paragraph. Wrap each paragraph with the paragraph tag to tell browsers to render the gaps.
+
+    <p>
+      This is the first paragraph. The paragraph tag is used to format vertical gaps between long pieces of text like this one.
+    </p>
+    <p>
+      This is the second paragraph. Even though there is a deliberate white gap between the paragraph above and this paragraph, by default browsers render them as one contiguous piece of text as shown here on the right.
+    </p>
+    <p>
+      This is the third paragraph. Wrap each paragraph with the paragraph tag to tell browsers to render the gaps.
+    </p>
+
+    <h2>List Tags</h2>
+    <h3>Ordered List Tag</h3>
+      1. How to make pancakes:
+      2. Mix dry ingredients.
+      3. Add wet ingredients.
+      4. Stir to combine.
+      Heat a skillet or griddle.
+      Pour batter onto the skillet.
+      Cook until bubbly on top.
+      Flip and cook the other side.
+      Serve and enjoy!
+  
+      <h3>Ordered List Tag</h3>
+      How to make pancakes:
+      <ol>
+        <li>Mix dry ingredients.</li>
+        <li>Add wet ingredients.</li>
+        <li>Stir to combine.</li>
+        <li>Heat a skillet or griddle.</li>
+        <li>Pour batter onto the skillet.</li>
+        <li>Cook until bubbly on top.</li>
+        <li>Flip and cook the other side.</li>
+        <li>Serve and enjoy!</li>
+      </ol>
+
+      <h3>Unordered List Tag</h3>
+      My favorite books (in no particular order)
+      <ul>
+        <li>Dune</li>
+        <li>Lord of the Rings</li>
+        <li>Ender's Game</li>
+        <li>Red Mars</li>
+        <li>The Forever War</li>
+      </ul>
+
+      <h2> Table Tag </h2>
+      <table border="1" width="100%">
+        <thead>
+          <tr>
+            <th>Quiz</th>
+            <th>Topic</th>
+            <th>Date</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Q1</td>
+            <td>CSS</td>
+            <td>2/10/24</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td>Q2</td>
+            <td>CSS</td>
+            <td>2/10/21</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td>Q3</td>
+            <td>JavaScript</td>
+            <td>2/17/21</td>
+            <td>95</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Average</td>
+            <td>90</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h2>Image Tag</h2>
+      Loading an image from the internet: <br/>
+      <img width="400px" src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg"/>
+      <br/>
+      Loading a local image:<br/>
+      <img src="teslabot.jpeg" height="200px"/>
+
+      <h2>Text fields</h2>
+      <form id="text-fields">
+        <label name="fds" for="text-fields-username">Username:</label>
+        <input id="text-fields-username" value="cheng" placehodler="seaqueue"> <br/>
+
+        <label for="text-fields-password">Password:</label>
+        <input type="password" id="text-fields-password" value="abcdefg#$"><br/>
+
+        <label for="text-fields-first-name">First name:</label>
+        <!-- title: when hover over for couple seconds -->
+        <input type="text" id="text-fields-first-name" title="Seaqueue"><br/>
+
+        <label for="text-fields-last-name">Last name:</label>
+        <input type="text" id="text-fields-last-name" placeholder="Cheng" value="Wonderland">
+      </form>
+
+      <h2>Text Boxes</h2>
+      <form>
+        <label>Biography</label><br/>
+        <textarea rows="3"cols="50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+      </form>
+
+      <form action="">
+        <h3>Buttons</h3>
+        <button type="submit">Click me!</button>
+        <!-- When inside a form tag, default type of a button is “submit”, once clicked, form sends the info to where the “action” is pointing to. 
+             Therefore need to declare the type to be “button” if no submit action needed. -->
+        <button type="button">Click me!</button>
+      </form>
+
+      <form>
+        <h2>File upload</h2>
+        <input type="file"/>
+      </form>
+
+      <form>
+        <h2>Radio buttons</h2>
+
+        <input type="radio" value="o1"/>
+        <input type="radio" value="o2" checked/>
+        <br/>
+        
+        <label>Favorite movie genre:</label>
+        <!-- to be mutually exclusive radio button has to be under the same "name" -->
+        <input type="radio" value="Scifi" name="genre">
+        <label>Scifi</label>
+
+        <!-- use "id" in input and "for" in label to make the text to be clickable-->
+        <input type="radio" value="Comedy" name="genre" id="genre-comedy">
+        <label for="genre-comedy">Comedy</label>
+
+        <!-- Or wrap both "input" and text in "label" -->
+        <label>
+          <input type="radio" value="Drama" name="genre">
+          Drama
+        </label>
+      </form>
+
+      <form>
+        <h2>Checkboxes</h2>
+
+        <!-- under the same name won't make checkboxes mutually exclusive
+             it's for grouping -->
+        <input type="checkbox" value="comedy" name="n1"/>
+        <label>comedy</label>
+
+        <!-- "id" "for" pair to make the text to be clickable -->
+        <input type="checkbox" value="drama" name="n1" id="n1drama"/>
+        <label for="n1drama">drama</label>
+
+        <!-- wrape both with label to make the text clickable -->
+        <label>
+          <input type="checkbox" value="scifi" name="n1" checked/>
+          scifi
+        </label>
+      </form>
+
+      <form>
+        <h2>Drop Down</h2>
+        <select>
+          <option>a</option>
+          <option>b</option>
+          <option selected>c</option>
+        </select>
+
+        <h3>select multiple</h3>
+        <label for="multiplebook">Favorite book</label>
+        <select id="multiplebook" name="fav-book" multiple style="width:15%">
+          <option value="q">q</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+        </select>
+      </form>
+
+      <form>
+        <h2>input types: Email, Number, Range, Date</h2>
+        <!-- "id" "for" to make the text clickable -->
+        <label for="emailinput">Email:</label>
+        <input id="emailinput" type="email" placeholder="seaqueue@test.com">
+      
+        <label>number limmited to 12-15:</label>
+        <input type="number" min="12" max="15">
+
+        <label>Rating:</label>
+        <input type="range" placeholder="seaqueue" max="5" value="4">
+
+        <!-- min=“”, max=“” gray out the date that are not allowed to be selected. -->
+        <label>DOB:</label>
+        <input type="date" value="2024-01-14" min="2024-01-06" max="2024-01-20">
+      </form>
+
+      <form>
+
+      </form>
+
+  </body>
+</html>
