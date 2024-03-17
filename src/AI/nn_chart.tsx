@@ -17,7 +17,7 @@ function Flow() {
   const [edges, setEdges, onEdgesChange] = useEdgesState(edges_db);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedFormula, setSelectedFormula] = useState(
-    "No formula for this node"
+    "Hang on, coming soon..."
   );
 
   const onConnect = useCallback(
@@ -27,7 +27,7 @@ function Flow() {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setSelectedFormula("No formula for this node");
+    setSelectedFormula("Hang on, coming soon...");
   };
 
   const onNodeClick = (event: any, node: any) => {
