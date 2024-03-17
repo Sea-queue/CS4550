@@ -26,12 +26,13 @@ const Modal = ({
       }}
     >
       <div
-        className="d-flex flex-column p-3 pb-1 w-25 h-25 d-inline-block text-center"
+        className="d-flex flex-column p-3 pb-1 w-50 d-inline-block text-center"
         style={{
+          height: "30vh",
           background: "white",
           borderRadius: 4,
           overflow: "auto",
-          fontSize: 30,
+          fontSize: "250%",
         }}
       >
         {children}
