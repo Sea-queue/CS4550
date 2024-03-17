@@ -33,25 +33,50 @@ function Flow() {
   const onNodeClick = (event: any, node: any) => {
     if (node.id === "softmax") {
       let softmax_formula =
-        "$S_{i,j} = \\frac{e^{z_{i, j}}}{\\sum_{l = 1}^{L}{e^{z_{i, j}}}}$";
+        "$$S_{i,j} = \\frac{e^{z_{i, j}}}{\\sum_{l = 1}^{L}{e^{z_{i, j}}}}$$";
       setSelectedFormula(softmax_formula);
     } else if (node.id === "relu") {
-      let relu_formula = String.raw`$
+      let relu_formula = String.raw`$$
         y = \begin{cases} 
         x & \text{if } x > 0 \\
         0 & \text{if } x <= 0
-        \end{cases}$`;
+        \end{cases}$$`;
       setSelectedFormula(relu_formula);
     } else if (node.id === "sigmoid") {
-      let relu_formula = `$\\sigma = \\frac{1}{1 + e^x}$`;
-      setSelectedFormula(relu_formula);
+      let sigmoid_formula = "$$\\sigma = \\frac{1}{1 + e^x}$$";
+      setSelectedFormula(sigmoid_formula);
     } else if (node.id === "linear") {
-      let relu_formula = "y = x";
-      setSelectedFormula(relu_formula);
+      let linear_formula = "$$y = x$$";
+      setSelectedFormula(linear_formula);
     } else if (node.id === "matrix-product") {
-      let relu_formula =
-        "batches of inputs x transpose of ONE layer's neurons' set of weights";
-      setSelectedFormula(relu_formula);
+      let matrix_formula =
+        "batches of inputs <times> transpose of ONE layer's neurons' set of weights";
+      setSelectedFormula(matrix_formula);
+    } else if (node.id === "cross-entropy") {
+      let entropy_formula = String.raw`$$\displaylines{ L = -\sum{y\log\hat y} \\ Simplified: L = -\log\hat y }$$`;
+      setSelectedFormula(entropy_formula);
+    } else if (node.id === "accuracy") {
+      let accuracy_formula =
+        "Classification: describes how often the largest confidence is the correct class in terms of a fraction.";
+      setSelectedFormula(accuracy_formula);
+    } else if (node.id === "back") {
+      let back_formula =
+        "Given a sample, calculate the impact: how much each weight and bias changes the loss value.";
+      setSelectedFormula(back_formula);
+    } else if (node.id === "gradient") {
+      let gradient_formula =
+        "Derivative measures the impact that x has on y of a nonlinear function: the slope of a tangent line at x which is called the instantaneous slope." +
+        "The tangent line is created by drawing a line between two points that are “infinitely close” on a curve." +
+        "Slope depends on where we measure it.";
+      setSelectedFormula(gradient_formula);
+    } else if (node.id === "chain-rule") {
+      let chain_formula =
+        "The loss function not only takes the model's output and targets as parameters to produce the error, but also as a function that takes all of the weights and biases if we chain all of the functions performed during the forward pass. To improve loss, we need to learn how each weight and bias impacts it by using the chain rule.";
+      setSelectedFormula(chain_formula);
+    } else if (node.id === "optimization") {
+      let optimization_formula =
+        "Gradient Descent: applying a negative fraction of the gradient to weights since we want to decrease the final output value, and the gradient shows the direction of the steepest ascent.";
+      setSelectedFormula(optimization_formula);
     }
     setIsModalOpen(true);
   };

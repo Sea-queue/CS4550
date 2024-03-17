@@ -20,6 +20,7 @@
   { "id": "output-linear", "source": "output", "target": "linear" },
 
   { "id": "loss-accuracy", "source": "loss", "target": "accuracy" },
+  { "id": "loss-cross-entropy", "source": "loss", "target": "cross-entropy" },
   { "id": "loss-l1l2", "source": "loss", "target": "l1l2" },
   { "id": "loss-mse", "source": "loss", "target": "mse" },
   { "id": "loss-mae", "source": "loss", "target": "mae" },
@@ -29,6 +30,7 @@
   { "id": "bp-softmax", "source": "softmax", "target": "back" },
   { "id": "bp-sigmoid", "source": "sigmoid", "target": "back" },
   { "id": "bp-linear", "source": "linear", "target": "back" },
+  { "id": "bp-cross-entropy", "source": "cross-entropy", "target": "back" },
   { "id": "bp-l1l2", "source": "l1l2", "target": "back" },
   { "id": "bp-mse", "source": "mse", "target": "back" },
   { "id": "bp-mae", "source": "mae", "target": "back" },
