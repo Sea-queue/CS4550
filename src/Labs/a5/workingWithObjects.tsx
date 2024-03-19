@@ -1,0 +1,143 @@
+import { useState } from "react";
+
+function WorkingWithObjects() {
+  const [assignment, setAssignment] = useState({
+    id: 1,
+    title: "NodeJS Assignment",
+    description: "Create a NodeJS server with ExpressJS",
+    due: "2021-10-10",
+    completed: false,
+    score: 0,
+  });
+
+  const [module, setModule] = useState({
+    id: 1,
+    name: "Week 11",
+    description: "intro to OCaml",
+    course: "NodeJS",
+  });
+
+  const [isComplete, setIsComplete] = useState(false);
+
+  const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment";
+  const MODULE_URL = "http://localhost:4000/a5/module";
+  return (
+    <>
+      <h3>Working With Objects</h3>
+      <h4>Retrieving Objects</h4>
+      <a
+        className="btn btn-primary"
+        href={`http://localhost:4000/a5/assignment`}
+        target="_blank"
+      >
+        Get Assignment
+      </a>
+      <h4>Retrieving Properties</h4>
+      <a
+        className="btn btn-primary"
+        href={`http://localhost:4000/a5/assignment/title`}
+        target="_blank"
+      >
+        Get Title
+      </a>
+
+      <h4>Modifying Properties</h4>
+      <label>Title:</label>
+      <input
+        type="text"
+        onChange={(e) =>
+          setAssignment({
+            ...assignment,
+            title: e.target.value,
+          })
+        }
+      />
+      <a
+        className="btn btn-primary ms-3 me-3"
+        href={`${ASSIGNMENT_URL}/title/${assignment.title}`}
+        target="_blank"
+      >
+        Update title
+      </a>
+      <label>Score:</label>
+      <input
+        type="number"
+        onChange={(e) =>
+          setAssignment({
+            ...assignment,
+            score: parseInt(e.target.value),
+          })
+        }
+      />
+      <a
+        className="btn btn-primary ms-3 me-3"
+        href={`${ASSIGNMENT_URL}/score/${assignment.score}`}
+        target="_blank"
+      >
+        Update score
+      </a>
+
+      <label>Completed: </label>
+      <input
+        type="checkbox"
+        onChange={() => {
+          setAssignment({
+            ...assignment,
+            completed: !isComplete,
+          });
+          setIsComplete(!isComplete);
+        }}
+      />
+      <a
+        className="btn btn-primary ms-3 me-3"
+        href={`${ASSIGNMENT_URL}/status/${assignment.completed}`}
+        target="_blank"
+      >
+        Update status
+      </a>
+
+      <h4>Retrieving Module</h4>
+      <a
+        className="btn btn-primary me-3"
+        href={`${MODULE_URL}`}
+        target="_blank"
+      >
+        Get Module
+      </a>
+      <h4>Retrieving the Module name</h4>
+      <a
+        className="btn btn-primary me-3"
+        href={`${MODULE_URL}/name`}
+        target="_blank"
+      >
+        Get Module Name
+      </a>
+      <h4>Changing the Module name</h4>
+      <input
+        type="text"
+        onChange={(e) => setModule({ ...module, name: e.target.value })}
+      />
+      <a
+        className="btn btn-primary ms-3 me-3"
+        href={`${MODULE_URL}/name/${module.name}`}
+        target="_blank"
+      >
+        Set Module Name
+      </a>
+      <h4>Update the Module Description</h4>
+      <input
+        type="text"
+        onChange={(e) => setModule({ ...module, description: e.target.value })}
+      />
+      <a
+        className="btn btn-primary ms-3 me-3"
+        href={`${MODULE_URL}/description/${module.description}`}
+        target="_blank"
+      >
+        Update Module Description
+      </a>
+    </>
+  );
+}
+
+export default WorkingWithObjects;
