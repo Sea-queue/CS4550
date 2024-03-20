@@ -1,5 +1,6 @@
 import EncodingParametersInURLs from "./EncodingParametersInURLs";
 import WorkingWithObjects from "./workingWithObjects";
+import WorkingWithArrays from "./workingWithArrays";
 
 function Assignment5() {
   return (
@@ -10,6 +11,7 @@ function Assignment5() {
       </a>
       <EncodingParametersInURLs />
       <WorkingWithObjects />
+      <WorkingWithArrays />
       <br />
       <br />
       <br />
