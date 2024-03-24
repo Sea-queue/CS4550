@@ -53,21 +53,23 @@ function ModuleList() {
 
   return (
     <div className="flex-fill">
-      <button type="button" className="btn btn-warning">
-        Collapse All
-      </button>
-      <button type="button" className="btn btn-info">
-        View Progress
-      </button>
-      <select className="form-select-sm">
-        <option>Publish All</option>
-        <option>a</option>
-        <option>b</option>
-        <option>c</option>
-      </select>
-      <button type="button" className="btn btn-primary">
-        Module
-      </button>
+      <div className="btn-toolbar column-gap-1">
+        <button type="button" className="btn btn-warning">
+          Collapse All
+        </button>
+        <button type="button" className="btn btn-info">
+          View Progress
+        </button>
+        <select className="form-select-sm">
+          <option>Publish All</option>
+          <option>a</option>
+          <option>b</option>
+          <option>c</option>
+        </select>
+        <button type="button" className="btn btn-primary">
+          Module
+        </button>
+      </div>
 
       <hr />
       <ul className="list-group modules">
@@ -128,19 +130,20 @@ function ModuleList() {
             <div>
               <FaEllipsisV className="me-2" />
               {module.name}
-              <button
-                className="btn btn-danger ms-2"
-                onClick={() => dispatch(deleteModule(module._id))}
-              >
-                Delete
-              </button>
-              <button
-                className="btn btn-warning ms-2"
-                onClick={(e) => dispatch(setModule(module))}
-              >
-                Edit
-              </button>
+
               <span className="float-end">
+                <button
+                  className="btn btn-danger btn-sm ms-2"
+                  onClick={() => dispatch(deleteModule(module._id))}
+                >
+                  Delete
+                </button>
+                <button
+                  className="btn btn-warning btn-sm ms-2 me-2"
+                  onClick={(e) => dispatch(setModule(module))}
+                >
+                  Edit
+                </button>
                 <FaCheckCircle className="text-sucess" />
                 <FaPlusCircle className="ms-2" />
                 <FaEllipsisV className="ms-2" />

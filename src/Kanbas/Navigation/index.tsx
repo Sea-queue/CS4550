@@ -6,6 +6,7 @@ import {
   FaVideo,
   FaHandshake,
   FaInbox,
+  FaDesktop,
 } from "react-icons/fa";
 import "./index.css";
 import { Link, useLocation } from "react-router-dom";
@@ -19,12 +20,13 @@ function KanbasNavigation() {
     { label: "Calendar", icon: <FaRegCalendarAlt className="fs-2" /> },
     { label: "Zoom", icon: <FaVideo className="fs-2" /> },
     { label: "Inbox", icon: <FaInbox className="fs-2" /> },
+    { label: "Studio", icon: <FaDesktop className="fs-2" /> },
     { label: "Help", icon: <FaHandshake className="fs-2" /> },
   ];
 
   const { pathname } = useLocation();
   return (
-    <ul className="kanbas-navigation">
+    <ul className="kanbas-navigation sticky-top">
       {links.map((link, index) => (
         <li
           key={index}

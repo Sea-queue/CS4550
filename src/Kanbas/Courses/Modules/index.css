@@ -11,7 +11,7 @@
 }
 
 .modules > li {
-  background-color: lightgray;
+  background-color: rgb(235, 233, 233);
   border: 1px solid gray !important;
   border-left: none !important;
 }
@@ -32,7 +32,7 @@
 }
 
 .course-status {
-  background-color: lightgray;
+  background-color: rgb(239, 237, 237);
   border: none;
   margin-left: 5px;
   padding: 5px;
