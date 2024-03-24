@@ -6,8 +6,8 @@ function WorkingWithArrays() {
   const [todo, setTodo] = useState({
     id: 1,
     title: "Node",
-    description: "",
-    due: "",
+    description: "Learn Node, It is very Important",
+    due: "2059-09-12",
     completed: false,
   });
 
@@ -22,6 +22,9 @@ function WorkingWithArrays() {
       completed: false,
     },
   ]);
+
+  const [errorMessage, setErrorMessage] = useState(null);
+
   const fetchTodos = async () => {
     const response = await axios.get(API);
     setTodos(response.data);
@@ -45,6 +48,31 @@ function WorkingWithArrays() {
   const updateTitle = async () => {
     const response = await axios.get(`${API}/${todo.id}/title/${todo.title}`);
     setTodos(response.data);
+  };
+
+  const postTodo = async () => {
+    const response = await axios.post(API, todo);
+    setTodos([...todos, response.data]);
+  };
+
+  const deleteTodo = async (target: any) => {
+    try {
+      const response = await axios.delete(`${API}/${target.id}`);
+      setTodos(todos.filter((t) => t.id !== target.id));
+    } catch (error: any) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
+  };
+
+  const updateTodo = async () => {
+    try {
+      const response = await axios.put(`${API}/${todo.id}`, todo);
+      setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+    } catch (error: any) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
   };
 
   useEffect(() => {
@@ -146,20 +174,78 @@ function WorkingWithArrays() {
         </a>
       </label>
 
+      <br />
+      <hr />
+
+      <button className="btn btn-warning" onClick={createTodo}>
+        Create Todo
+      </button>
+      <button className="btn btn-warning ms-3" onClick={updateTitle}>
+        Update Title
+      </button>
+      <br />
+      <hr />
+
+      <div className="d-flex mb-2">
+        <textarea
+          value={todo.description}
+          onChange={(e) => {
+            setTodo({ ...todo, description: e.target.value });
+          }}
+        />
+
+        <input
+          value={todo.due}
+          type="date"
+          onChange={(e) => {
+            setTodo({ ...todo, due: e.target.value });
+          }}
+        />
+
+        <label className="ms-3 me-3">
+          <input
+            checked={todo.completed}
+            type="checkbox"
+            onChange={(e) =>
+              setTodo({
+                ...todo,
+                completed: e.target.checked,
+              })
+            }
+          />
+          Completed
+        </label>
+        <button className="btn btn-primary" onClick={postTodo}>
+          Post Todo
+        </button>
+        <button className="btn btn-warning ms-2" onClick={updateTodo}>
+          Update Todo
+        </button>
+      </div>
+
       <div>
-        <button className="btn btn-warning" onClick={createTodo}>
-          Create Todo
-        </button>
-        <button className="btn btn-warning ms-3" onClick={updateTitle}>
-          Update Title
-        </button>
+        {errorMessage && (
+          <div className="alert alert-danger mb-2 mt-2"> {errorMessage}</div>
+        )}
         <ul className="list-group">
           {todos.map((t) => (
             <li
               className="list-group-item d-flex justify-content-between"
               key={t.id}
             >
-              {t.title}
+              <div>
+                <input
+                  className="me-2"
+                  checked={t.completed}
+                  type="checkbox"
+                  readOnly
+                />
+                {t.title}
+              </div>
+
+              <p>{t.description}</p>
+              <p>{t.due}</p>
+
               <div>
                 <button
                   className="btn btn-success me-3"
@@ -172,6 +258,12 @@ function WorkingWithArrays() {
                   onClick={() => removeTodo(t)}
                 >
                   Remove
+                </button>
+                <button
+                  className="btn btn-danger ms-2"
+                  onClick={() => deleteTodo(t)}
+                >
+                  Delete
                 </button>
               </div>
             </li>
