@@ -72,8 +72,12 @@ function Dashboard({
         type="date"
         onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
       />
-      <button onClick={addNewCourse}>Add</button>
-      <button onClick={updateCourse}>Update</button>
+      <button className="btn btn-warning" onClick={addNewCourse}>
+        Add
+      </button>
+      <button className="btn btn-danger" onClick={updateCourse}>
+        Update
+      </button>
       <div className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4">
           {courses.map((course) => (
@@ -95,25 +99,32 @@ function Dashboard({
                     }}
                   >
                     {course.name}
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setCourse(course);
-                      }}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        deleteCourse(course._id);
-                      }}
-                    >
-                      Delete
-                    </button>
                   </Link>
                   <p className="card-text">{course.name}</p>
-                  <Link to={`/Kanbas/Courses/${course._id}/Home`}>Go</Link>
+                  <Link
+                    className="btn btn-outline-success btn-sm ms-1 mb-1"
+                    to={`/Kanbas/Courses/${course._id}/Home`}
+                  >
+                    Go
+                  </Link>
+                  <button
+                    className="btn btn-warning btn-sm float-end me-1"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setCourse(course);
+                    }}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="btn btn-danger btn-sm float-end me-1"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      deleteCourse(course._id);
+                    }}
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
             </div>
