@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { courses_db } from "../Database";
+// import { courses_db } from "../Database";
 import { useState } from "react";
 
 function Dashboard({
@@ -80,17 +80,17 @@ function Dashboard({
       </button>
       <div className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4">
-          {courses.map((course) => (
-            <div key={course._id} className="col" style={{ width: 300 }}>
+          {courses.map((crs) => (
+            <div key={crs._id} className="col" style={{ width: 300 }}>
               <div className="card">
                 <img
-                  src={require(`./images/${course.image}`)}
+                  src={require(`./images/${crs.image}`)}
                   className="card-image-top"
                   style={{ height: 150 }}
                 />
                 <div>
                   <Link
-                    to={`/Kanbas/Courses/${course._id}/Home`}
+                    to={`/Kanbas/Courses/${crs._id}/Home`}
                     className="card-body"
                     style={{
                       textDecoration: "none",
@@ -98,12 +98,12 @@ function Dashboard({
                       fontWeight: "bold",
                     }}
                   >
-                    {course.name}
+                    {(crs.name, crs._id)}
                   </Link>
-                  <p className="card-text">{course.name}</p>
+                  <p className="card-text">{crs.name}</p>
                   <Link
                     className="btn btn-outline-success btn-sm ms-1 mb-1"
-                    to={`/Kanbas/Courses/${course._id}/Home`}
+                    to={`/Kanbas/Courses/${crs._id}/Home`}
                   >
                     Go
                   </Link>
@@ -111,7 +111,7 @@ function Dashboard({
                     className="btn btn-warning btn-sm float-end me-1"
                     onClick={(e) => {
                       e.preventDefault();
-                      setCourse(course);
+                      setCourse(crs);
                     }}
                   >
                     Edit
@@ -120,7 +120,7 @@ function Dashboard({
                     className="btn btn-danger btn-sm float-end me-1"
                     onClick={(e) => {
                       e.preventDefault();
-                      deleteCourse(course._id);
+                      deleteCourse(crs._id);
                     }}
                   >
                     Delete

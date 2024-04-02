@@ -1,0 +1,150 @@
+[
+  {
+    "id": "inputs",
+    "position": { "x": 200, "y": 100 },
+    "data": { "label": "Inputs" }
+  },
+
+  {
+    "id": "training",
+    "position": { "x": 0, "y": 0 },
+    "data": { "label": "Training Data" }
+  },
+  {
+    "id": "validation",
+    "position": { "x": 0, "y": 200 },
+    "data": { "label": "Validation Data" }
+  },
+  {
+    "id": "testing",
+    "position": { "x": 0, "y": 350 },
+    "data": { "label": "Testing Data" }
+  },
+
+  {
+    "id": "matrix-product",
+    "position": { "x": 550, "y": -100 },
+    "data": { "label": "Matrix Product & Addition on Inputs & Weights, Biases" }
+  },
+
+  {
+    "id": "dense-layer",
+    "position": { "x": 400, "y": 100 },
+    "data": { "label": "Dense Layers" }
+  },
+
+  {
+    "id": "relu",
+    "position": { "x": 400, "y": 250 },
+    "data": { "label": "ReLU" }
+  },
+
+  {
+    "id": "dropout",
+    "position": { "x": 600, "y": 100 },
+    "data": { "label": "Dropout Layer" }
+  },
+
+  {
+    "id": "output",
+    "position": { "x": 1000, "y": 100 },
+    "data": { "label": "Output layer" }
+  },
+
+  {
+    "id": "softmax",
+    "position": { "x": 800, "y": 250 },
+    "data": { "label": "SoftMax" }
+  },
+  {
+    "id": "sigmoid",
+    "position": { "x": 1000, "y": 250 },
+    "data": { "label": "Sigmoid" }
+  },
+  {
+    "id": "linear",
+    "position": { "x": 1200, "y": 250 },
+    "data": { "label": "Linear" }
+  },
+
+  {
+    "id": "loss",
+    "position": { "x": 1700, "y": 100 },
+    "data": { "label": "Loss Function" }
+  },
+
+  {
+    "id": "cross-entropy",
+    "position": { "x": 1400, "y": 250 },
+    "data": { "label": "Categorical Cross-Entropy" }
+  },
+
+  {
+    "id": "l1l2",
+    "position": { "x": 1600, "y": 250 },
+    "data": { "label": "L1 / L2 Regularization" }
+  },
+
+  {
+    "id": "mse",
+    "position": { "x": 1800, "y": 250 },
+    "data": { "label": "Mean Squared Error" }
+  },
+
+  {
+    "id": "mae",
+    "position": { "x": 2000, "y": 250 },
+    "data": { "label": "Mean Absolute Error" }
+  },
+
+  {
+    "id": "accuracy",
+    "position": { "x": 2100, "y": 100 },
+    "data": { "label": "Accuracy" }
+  },
+
+  {
+    "id": "back",
+    "position": { "x": 1000, "y": 700 },
+    "data": { "label": "Back Propagation" }
+  },
+
+  {
+    "id": "gradient",
+    "position": { "x": 1300, "y": 600 },
+    "data": { "label": "Gradient (Partial Derivative)" }
+  },
+
+  {
+    "id": "chain-rule",
+    "position": { "x": 1300, "y": 800 },
+    "data": { "label": "Chain Rule" }
+  },
+
+  {
+    "id": "optimization",
+    "position": { "x": 1000, "y": 900 },
+    "data": { "label": "Optimization" }
+  },
+
+  {
+    "id": "sgd",
+    "position": { "x": 700, "y": 1100 },
+    "data": { "label": "Optimizer-SGD" }
+  },
+  {
+    "id": "adam",
+    "position": { "x": 900, "y": 1100 },
+    "data": { "label": "Optimizer-Adam" }
+  },
+  {
+    "id": "adagrad",
+    "position": { "x": 1100, "y": 1100 },
+    "data": { "label": "Optimizer-Adagrad" }
+  },
+  {
+    "id": "rmsprop",
+    "position": { "x": 1300, "y": 1100 },
+    "data": { "label": "Optimizer-RMSprop" }
+  }
+]

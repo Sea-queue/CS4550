@@ -1,0 +1,45 @@
+[
+  { "id": "input-dense", "source": "inputs", "target": "dense-layer" },
+  { "id": "training-input", "source": "training", "target": "inputs" },
+  { "id": "validation-input", "source": "inputs", "target": "validation" },
+  { "id": "testing-input", "source": "inputs", "target": "testing" },
+
+  { "id": "matrix-input", "source": "matrix-product", "target": "inputs" },
+  { "id": "matrix-layer", "source": "matrix-product", "target": "dense-layer" },
+  { "id": "matrix-dropout", "source": "matrix-product", "target": "dropout" },
+  { "id": "matrix-output", "source": "matrix-product", "target": "output" },
+
+  { "id": "dense-dropout", "source": "dense-layer", "target": "dropout" },
+  { "id": "dense-relu", "source": "dense-layer", "target": "relu" },
+
+  { "id": "dropout-output", "source": "dropout", "target": "output" },
+
+  { "id": "output-loss", "source": "output", "target": "loss" },
+  { "id": "output-sofmax", "source": "output", "target": "softmax" },
+  { "id": "output-sigmoid", "source": "output", "target": "sigmoid" },
+  { "id": "output-linear", "source": "output", "target": "linear" },
+
+  { "id": "loss-accuracy", "source": "loss", "target": "accuracy" },
+  { "id": "loss-cross-entropy", "source": "loss", "target": "cross-entropy" },
+  { "id": "loss-l1l2", "source": "loss", "target": "l1l2" },
+  { "id": "loss-mse", "source": "loss", "target": "mse" },
+  { "id": "loss-mae", "source": "loss", "target": "mae" },
+
+  { "id": "bp-relu", "source": "relu", "target": "back" },
+  { "id": "bp-dropout", "source": "dropout", "target": "back" },
+  { "id": "bp-softmax", "source": "softmax", "target": "back" },
+  { "id": "bp-sigmoid", "source": "sigmoid", "target": "back" },
+  { "id": "bp-linear", "source": "linear", "target": "back" },
+  { "id": "bp-cross-entropy", "source": "cross-entropy", "target": "back" },
+  { "id": "bp-l1l2", "source": "l1l2", "target": "back" },
+  { "id": "bp-mse", "source": "mse", "target": "back" },
+  { "id": "bp-mae", "source": "mae", "target": "back" },
+  { "id": "bp-gradient", "source": "gradient", "target": "back" },
+  { "id": "bp-chain", "source": "back", "target": "chain-rule" },
+  { "id": "bp-optimization", "source": "back", "target": "optimization" },
+
+  { "id": "opti-sgd", "source": "optimization", "target": "sgd" },
+  { "id": "opti-adam", "source": "optimization", "target": "adam" },
+  { "id": "opti-adagrad", "source": "optimization", "target": "adagrad" },
+  { "id": "opti-rmsprop", "source": "optimization", "target": "rmsprop" }
+]
