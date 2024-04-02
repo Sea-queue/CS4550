@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function WorkingWithObjects() {
   const [assignment, setAssignment] = useState({
     id: 1,
@@ -20,8 +22,8 @@ function WorkingWithObjects() {
 
   const [isComplete, setIsComplete] = useState(false);
 
-  const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment";
-  const MODULE_URL = "http://localhost:4000/a5/module";
+  const ASSIGNMENT_URL = `${API_BASE}/a5/assignment`;
+  const MODULE_URL = `${API_BASE}/a5/module`;
 
   const fetchAssignment = async () => {
     const response = await axios.get(`${ASSIGNMENT_URL}`);
@@ -59,7 +61,7 @@ function WorkingWithObjects() {
       <h4>Retrieving Objects</h4>
       <a
         className="btn btn-primary"
-        href={`http://localhost:4000/a5/assignment`}
+        href={`${API_BASE}/a5/assignment`}
         target="_blank"
       >
         Get Assignment
@@ -67,7 +69,7 @@ function WorkingWithObjects() {
       <h4>Retrieving Properties</h4>
       <a
         className="btn btn-primary"
-        href={`http://localhost:4000/a5/assignment/title`}
+        href={`${API_BASE}/a5/assignment/title`}
         target="_blank"
       >
         Get Title
