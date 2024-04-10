@@ -2,11 +2,12 @@ import {
   FaRegUserCircle,
   FaTachometerAlt,
   FaBook,
+  FaNapster,
+  FaYoutube,
+  FaBrain,
   FaRegCalendarAlt,
   FaVideo,
-  FaHandshake,
   FaInbox,
-  FaDesktop,
 } from "react-icons/fa";
 import "./index.css";
 import { Link, useLocation } from "react-router-dom";
@@ -15,13 +16,13 @@ import Nav from "react-bootstrap/Nav";
 function KanbasNavigation() {
   const links = [
     { label: "Account", icon: <FaRegUserCircle className="fs-2" /> },
+    { label: "OpenAI", icon: <FaBrain className="fs-2" /> },
+    { label: "YouTube", icon: <FaYoutube className="fs-2" /> },
+    { label: "Napster", icon: <FaNapster className="fs-2" /> },
     { label: "Dashboard", icon: <FaTachometerAlt className="fs-2" /> },
     { label: "Courses", icon: <FaBook className="fs-2" /> },
     { label: "Calendar", icon: <FaRegCalendarAlt className="fs-2" /> },
     { label: "Zoom", icon: <FaVideo className="fs-2" /> },
-    { label: "Inbox", icon: <FaInbox className="fs-2" /> },
-    { label: "Studio", icon: <FaDesktop className="fs-2" /> },
-    { label: "Help", icon: <FaHandshake className="fs-2" /> },
   ];
 
   const { pathname } = useLocation();

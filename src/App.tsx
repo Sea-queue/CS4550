@@ -16,7 +16,7 @@ function App() {
           {/* "/*" allows to nest the routes in this path to break down to multiple pages further */}
           <Route path="/Labs/*" element={<Labs />} />
           <Route path="/Kanbas/*" element={<Kanbas />} />
-          <Route path="/AI/*" element={<AI />} />
+          <Route path="/ArtificalInteligence/*" element={<AI />} />
         </Routes>
       </div>
     </HashRouter>
