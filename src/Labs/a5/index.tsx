@@ -2,11 +2,13 @@ import EncodingParametersInURLs from "./EncodingParametersInURLs";
 import WorkingWithObjects from "./workingWithObjects";
 import WorkingWithArrays from "./workingWithArrays";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function Assignment5() {
   return (
     <div className="ms-5">
       <h1>A5</h1>
-      <a href="http://localhost:4000/a5/welcome" target="_blank">
+      <a href={`${API_BASE}/a5/welcome`} target="_blank">
         Welcome
       </a>
       <EncodingParametersInURLs />
