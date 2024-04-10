@@ -5,7 +5,7 @@ function Navigation() {
   const { pathname } = useLocation();
   return (
     <nav className="nav nav-tabs nav-pills nav-fill mt-2 mb-2 border-1">
-      <Link
+      {/* <Link
         className={`nav-link ${
           pathname.includes("a3") ? "active" : ""
         } border-warning`}
@@ -30,7 +30,7 @@ function Navigation() {
       >
         React Fundamentals
       </Link>
-      <br />
+      <br /> */}
 
       {/* <Link
         className={`nav-link ${pathname.includes("a5") ? "active" : ""}`}
