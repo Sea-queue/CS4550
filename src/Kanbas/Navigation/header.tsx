@@ -8,26 +8,26 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FaRegUserCircle,
+  FaBrain,
+  FaNapster,
+  FaTv,
   FaTachometerAlt,
   FaBook,
   FaRegCalendarAlt,
   FaVideo,
-  FaHandshake,
-  FaInbox,
+  FaBars,
 } from "react-icons/fa";
 
 function Header() {
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
-
-  const kanbas_links = [
+  const links = [
     { label: "Account", icon: <FaRegUserCircle className="fs-2" /> },
+    { label: "OpenAI", icon: <FaBrain className="fs-2" /> },
+    { label: "Movies", icon: <FaTv className="fs-2" /> },
+    { label: "Music", icon: <FaNapster className="fs-2" /> },
     { label: "Dashboard", icon: <FaTachometerAlt className="fs-2" /> },
     { label: "Courses", icon: <FaBook className="fs-2" /> },
     { label: "Calendar", icon: <FaRegCalendarAlt className="fs-2" /> },
     { label: "Zoom", icon: <FaVideo className="fs-2" /> },
-    { label: "Inbox", icon: <FaInbox className="fs-2" /> },
-    { label: "Help", icon: <FaHandshake className="fs-2" /> },
   ];
 
   const courses_links = ["Home", "Modules", "Piazza", "Grades", "Assignments"];
@@ -35,40 +35,37 @@ function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
       <button
-        className="navbar-toggler float-left"
+        className="btn btn-dark"
         type="button"
-        data-toggle="collapse"
-        data-target="#kanbasNavigation"
-        aria-controls="kanbasNavigation"
-        aria-expanded={!isNavCollapsed ? true : false}
-        aria-label="Toggle navigation"
-        onClick={handleNavCollapse}
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample"
       >
-        <span className="navbar-toggler-icon"></span>
+        <FaBars />
       </button>
-      <a className="navbar-brand" href="https://www.northeastern.edu/">
-        NEU
+      <a className="navbar-brand" href="https://sea-queue.github.io/">
+        Seaqueue
       </a>
-
-      {isNavCollapsed ? (
-        ""
-      ) : (
-        <button
-          className="navbar-toggler float-left"
-          type="button"
-          onClick={handleNavCollapse}
-        >
-          <i className={"fa fa-window-close"}></i>
-        </button>
-      )}
-
       <div
-        className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
-        id="kanbasNavigation"
+        className="offcanvas offcanvas-top"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
       >
-        <ul className="navbar-nav mr-auto header">
-          {kanbas_links.map((link, index) => (
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title" id="offcanvasExampleLabel">
+            Seaqueue
+          </h5>
+          <button
+            type="button"
+            className="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <ul className="navbar-nav mr-auto header ps-3">
+          {links.map((link, index) => (
             <Link
+              className="mb-1"
               key={index}
               to={`/Kanbas/${link.label}`}
               style={{ textDecoration: "none" }}
@@ -80,61 +77,6 @@ function Header() {
       </div>
     </nav>
   );
-
-  // Solution_2:
-  //   const kanbas_links = [
-  //     { label: "Account", icon: <FaRegUserCircle className="fs-2" /> },
-  //     { label: "Dashboard", icon: <FaTachometerAlt className="fs-2" /> },
-  //     { label: "Courses", icon: <FaBook className="fs-2" /> },
-  //     { label: "Calendar", icon: <FaRegCalendarAlt className="fs-2" /> },
-  //   ];
-
-  //   const courses_links = ["Home", "Modules", "Piazza", "Grades", "Assignments"];
-
-  //   return (
-  //     <Navbar expand="lg" className="bg-body-tertiary">
-  //       <Container>
-  //         <Navbar.Toggle
-  //           aria-controls="#kanbasNavigation"
-  //           data-target="#kanbasNavigation"
-  //         ></Navbar.Toggle>
-
-  //         <Navbar.Brand href="https://www.northeastern.edu/">NEU</Navbar.Brand>
-
-  //         <Navbar.Toggle
-  //           aria-controls="#courseNavigation"
-  //           data-target="#courseNavigation"
-  //         >
-  //           <i className="fa fa-solid fa-chevron-down"></i>
-  //         </Navbar.Toggle>
-
-  //         <Navbar.Collapse id="kanbasNavigation">
-  //           <Nav>
-  //             {kanbas_links.map((link, index) => (
-  //               <Nav.Link>
-  //                 <Link
-  //                   to={`/Kanbas/${link.label}`}
-  //                   style={{ textDecoration: "none" }}
-  //                 >
-  //                   {link.icon} {link.label}
-  //                 </Link>
-  //               </Nav.Link>
-  //             ))}
-  //           </Nav>
-  //         </Navbar.Collapse>
-  //         <Navbar.Collapse id="courseNavigation">
-  //           <Nav>
-  //             <Nav.Link>
-  //               {courses_links.map((link, index) => (
-  //                 <Link to={link}>{link}</Link>
-  //               ))}
-  //             </Nav.Link>
-  //           </Nav>
-  //         </Navbar.Collapse>
-  //       </Container>
-  //     </Navbar>
-  //   );
-  // }
 }
 
 export default Header;
