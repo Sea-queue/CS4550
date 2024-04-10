@@ -34,9 +34,9 @@ export default function Chat() {
     }
   };
 
-  useEffect(() => {
-    getMessages();
-  }, []);
+  // useEffect(() => {
+  //   getMessages();
+  // }, []);
 
   return (
     <div className="container-fluid">
