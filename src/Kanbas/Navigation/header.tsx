@@ -1,10 +1,3 @@
-// import Container from "react-bootstrap/Container";
-// import Nav from "react-bootstrap/Nav";
-// import Navbar from "react-bootstrap/Navbar";
-// import NavDropdown from "react-bootstrap/NavDropdown";
-// import KanbasNavigation from ".";
-// import CourseNavigation from "../Courses/Navigation";
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FaRegUserCircle,
@@ -62,10 +55,10 @@ function Header() {
             aria-label="Close"
           ></button>
         </div>
-        <ul className="navbar-nav mr-auto header ps-3">
+        <ul className="navbar-nav mr-auto header ps-3 pe-3">
           {links.map((link, index) => (
             <Link
-              className="mb-1"
+              className="shadow p-1 mb-1 bg-body-tertiary rounded"
               key={index}
               to={`/Kanbas/${link.label}`}
               style={{ textDecoration: "none" }}

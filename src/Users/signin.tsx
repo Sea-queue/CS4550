@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { User } from "./client";
 import * as client from "./client";
 import { Link } from "react-router-dom";
+import { FaSignInAlt } from "react-icons/fa";
 
 export default function Signin() {
   const [credentials, setCredentials] = useState<User>({
@@ -29,32 +30,33 @@ export default function Signin() {
   };
 
   return (
-    <div className="container d-flex flex-column">
-      <h1>Signin</h1>
-      <input
-        className="w-25 mb-2"
-        placeholder="username"
-        onChange={(e) => {
-          setCredentials({ ...credentials, username: e.target.value });
-        }}
-      />
-      <input
-        className="w-25 mb-2"
-        type={"password"}
-        placeholder="password"
-        onChange={(e) => {
-          setCredentials({ ...credentials, password: e.target.value });
-        }}
-      />
-      <button
-        className="btn btn-primary btn-sm w-25 mb-1 mt-1"
-        onClick={signin}
-      >
-        Signin
-      </button>
-      <Link className="btn btn-warning btn-sm w-25" to="/Kanbas/Account/Signup">
-        Signup
-      </Link>
+    <div className="d-flex justify-content-center mt-5">
+      <div className="d-flex flex-column w-25">
+        <h1>
+          Signin <FaSignInAlt />
+        </h1>
+        <input
+          className="mb-2"
+          placeholder="username"
+          onChange={(e) => {
+            setCredentials({ ...credentials, username: e.target.value });
+          }}
+        />
+        <input
+          className="mb-2"
+          type={"password"}
+          placeholder="password"
+          onChange={(e) => {
+            setCredentials({ ...credentials, password: e.target.value });
+          }}
+        />
+        <button className="btn btn-primary btn-sm mb-1 mt-1" onClick={signin}>
+          Signin
+        </button>
+        <Link className="btn btn-warning btn-sm" to="/Kanbas/Account/Signup">
+          Signup
+        </Link>
+      </div>
     </div>
   );
 }
