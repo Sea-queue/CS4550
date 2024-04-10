@@ -3,6 +3,7 @@ import Navigation from "../Navigation";
 import KanbasNavigation from "./Navigation";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
+import Account from "./Account";
 import Header from "./Navigation/header";
 import { useState, useEffect } from "react";
 // import { courses_db } from "./Database";
@@ -92,7 +93,7 @@ function Kanbas() {
           </div>
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Account" element={<h1>Account</h1>} />
+            <Route path="Account/*" element={<Account />} />
             <Route
               path="Dashboard"
               element={
