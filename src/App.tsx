@@ -11,12 +11,12 @@ function App() {
     <HashRouter>
       <div className="ml-3">
         <Routes>
-          <Route path="/" element={<Navigate to="/ArtificalInteligence" />} />
+          <Route path="/" element={<Navigate to="/AI" />} />
           <Route path="/Hello" element={<HelloWorld />} />
           {/* "/*" allows to nest the routes in this path to break down to multiple pages further */}
           <Route path="/Labs/*" element={<Labs />} />
           <Route path="/Kanbas/*" element={<Kanbas />} />
-          <Route path="/ArtificalInteligence/*" element={<AI />} />
+          <Route path="/AI/*" element={<AI />} />
         </Routes>
       </div>
     </HashRouter>

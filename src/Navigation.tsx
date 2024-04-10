@@ -55,17 +55,13 @@ function Navigation() {
       <br />
       <Link
         className={`nav-link ${
-          pathname.includes("ArtificalInteligence") ? "active" : ""
+          pathname.includes("/AI") ? "active" : ""
         } border-warning`}
         style={{
-          color: `${
-            pathname.includes("ArtificalInteligence") ? "gold" : "black"
-          }`,
-          background: `${
-            pathname.includes("ArtificalInteligence") ? "rgb(2, 82, 43)" : ""
-          }`,
+          color: `${pathname.includes("/AI") ? "gold" : "black"}`,
+          background: `${pathname.includes("/AI") ? "rgb(2, 82, 43)" : ""}`,
         }}
-        to="/ArtificalInteligence"
+        to="/AI"
       >
         Neural Network
       </Link>
