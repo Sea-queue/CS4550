@@ -31,7 +31,7 @@ export default function Signin() {
 
   return (
     <div className="d-flex justify-content-center mt-5">
-      <div className="d-flex flex-column w-25">
+      <div className="d-flex flex-column w-50">
         <h1>
           Signin <FaSignInAlt />
         </h1>

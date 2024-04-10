@@ -11,6 +11,7 @@ import { Provider } from "react-redux";
 import store from "./Store";
 import axios from "axios";
 import OpenAI from "../OpenAI";
+import Napster from "../Napster";
 
 //we would like the URL to point to the local Node server when developing locally, and use the remote server when deployed remotely without having to change the URLs manually ourselves.
 const API_BASE = process.env.REACT_APP_API_BASE;
@@ -117,6 +118,7 @@ function Kanbas() {
               element={<Courses />}
             />
             <Route path="/OpenAI/*" element={<OpenAI />} />
+            <Route path="Music/*" element={<Napster />} />
           </Routes>
         </div>
       </div>
