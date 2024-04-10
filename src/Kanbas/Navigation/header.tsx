@@ -69,6 +69,7 @@ function Header() {
         <ul className="navbar-nav mr-auto header">
           {kanbas_links.map((link, index) => (
             <Link
+              key={index}
               to={`/Kanbas/${link.label}`}
               style={{ textDecoration: "none" }}
             >
