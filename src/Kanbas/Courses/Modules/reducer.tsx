@@ -5,7 +5,7 @@ const initialState = {
   // modules: modules,
   modules: [{ _id: -1 }],
   module: {
-    _id: -1,
+    id: new Date().getTime().toString(),
     name: "New Module",
     description: "New Module Description",
   },
@@ -36,7 +36,6 @@ const modulesSlice = createSlice({
       );
     },
     updateModule: (state, action) => {
-      console.log("update m", action.payload);
       state.modules = state.modules.map((module) => {
         if (module._id === action.payload._id) {
           return action.payload;

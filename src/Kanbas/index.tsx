@@ -17,7 +17,7 @@ const API_BASE = process.env.REACT_APP_API_BASE;
 function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
   const [course, setCourse] = useState({
-    _id: "0",
+    id: new Date().getTime().toString(),
     name: "New Course",
     number: "New Number",
     startDate: "2023-09-10",
@@ -39,8 +39,17 @@ function Kanbas() {
   // };
 
   const addNewCourse = async () => {
-    const response = await axios.post(COURSES_API, course);
-    setCourses([...courses, response.data]);
+    let contains = courses.find((c) => course.name === c.name);
+    if (contains) {
+      alert("course already exists");
+    } else {
+      try {
+        const response = await axios.post(COURSES_API, course);
+        setCourses([...courses, response.data]);
+      } catch (error) {
+        alert("add failed");
+      }
+    }
   };
 
   // const deleteCourse = (courseId: string) => {
@@ -48,8 +57,12 @@ function Kanbas() {
   // };
 
   const deleteCourse = async (courseId: string) => {
-    const response = await axios.delete(`${COURSES_API}/${courseId}`);
-    setCourses(courses.filter((c) => c._id !== courseId));
+    try {
+      const response = await axios.delete(`${COURSES_API}/${courseId}`);
+      setCourses(courses.filter((c) => c.id !== courseId));
+    } catch (error) {
+      alert("delete failed");
+    }
   };
 
   // const updateCourse = () => {
@@ -65,10 +78,10 @@ function Kanbas() {
   // };
 
   const updateCourse = async () => {
-    const response = await axios.put(`${COURSES_API}/${course._id}`, course);
+    const response = await axios.put(`${COURSES_API}/${course.id}`, course);
     setCourses(
       courses.map((c) => {
-        if (c._id === course._id) {
+        if (c.id === course.id) {
           return course;
         }
         return c;

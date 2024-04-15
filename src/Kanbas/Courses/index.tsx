@@ -14,7 +14,7 @@ function Courses() {
   // const course = courses_db.find((course) => course._id === courseId);
   // const course = courses.find((course) => course._id === courseId);
   const COURSES_API = "http://localhost:4000/api/courses";
-  const [course, setCourse] = useState<any>({ _id: "" });
+  const [course, setCourse] = useState<any>({ id: "" });
   const findCourseById = async (courseId?: string) => {
     try {
       const response = await axios.get(`${COURSES_API}/${courseId}`);

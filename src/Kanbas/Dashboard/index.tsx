@@ -45,6 +45,7 @@ function Dashboard({
   //     })
   //   );
   // };
+  console.log("in dashboard", courses);
   return (
     <div className="p-4">
       <h1>Dashboard</h1>
@@ -81,16 +82,16 @@ function Dashboard({
       <div className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4">
           {courses.map((crs) => (
-            <div key={crs._id} className="col" style={{ width: 300 }}>
+            <div key={crs.id} className="col" style={{ width: 300 }}>
               <div className="card">
                 <img
-                  src={require(`./images/${crs.image}`)}
+                  src={require(`./images/reactapp.png`)}
                   className="card-image-top"
                   style={{ height: 150 }}
                 />
                 <div>
                   <Link
-                    to={`/Kanbas/Courses/${crs._id}/Home`}
+                    to={`/Kanbas/Courses/${crs.id}/Home`}
                     className="card-body"
                     style={{
                       textDecoration: "none",
@@ -98,12 +99,12 @@ function Dashboard({
                       fontWeight: "bold",
                     }}
                   >
-                    {(crs.name, crs._id)}
+                    {(crs.name, crs.number)}
                   </Link>
                   <p className="card-text">{crs.name}</p>
                   <Link
                     className="btn btn-outline-success btn-sm ms-1 mb-1"
-                    to={`/Kanbas/Courses/${crs._id}/Home`}
+                    to={`/Kanbas/Courses/${crs.id}/Home`}
                   >
                     Go
                   </Link>
@@ -120,7 +121,7 @@ function Dashboard({
                     className="btn btn-danger btn-sm float-end me-1"
                     onClick={(e) => {
                       e.preventDefault();
-                      deleteCourse(crs._id);
+                      deleteCourse(crs.id);
                     }}
                   >
                     Delete

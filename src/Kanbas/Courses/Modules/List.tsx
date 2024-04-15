@@ -84,6 +84,8 @@ function ModuleList() {
 
   const handleUpdateModule = () => {
     client.updateModule(module).then((status) => {
+      alert("Success!");
+      console.log("sucess");
       dispatch(updateModule(module));
     });
   };
@@ -92,7 +94,7 @@ function ModuleList() {
     client.findModulesForCourse(courseId).then((modules) => {
       dispatch(setModules(modules));
     });
-  }, [courseId]);
+  }, [courseId, moduleList]);
 
   return (
     <div className="flex-fill">
@@ -182,7 +184,7 @@ function ModuleList() {
                 <button
                   className="btn btn-danger btn-sm ms-2"
                   // onClick={() => dispatch(deleteModule(module._id))}
-                  onClick={() => handleDeleteModule(module._id)}
+                  onClick={() => handleDeleteModule(module.id)}
                 >
                   Delete
                 </button>
@@ -197,7 +199,7 @@ function ModuleList() {
                 <FaEllipsisV className="ms-2" />
               </span>
             </div>
-            {selectedModule._id === module._id && (
+            {selectedModule.id === module.id && (
               <ul className="list-group">
                 {module.lessons?.map((lesson: any, index: any) => (
                   <li key={index} className="list-group-item">
