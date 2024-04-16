@@ -12,7 +12,7 @@ import store from "./Store";
 import axios from "axios";
 
 //we would like the URL to point to the local Node server when developing locally, and use the remote server when deployed remotely without having to change the URLs manually ourselves.
-const API_BASE = process.env.REACT_APP_API_BASE_A6;
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
